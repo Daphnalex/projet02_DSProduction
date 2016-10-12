@@ -1,0 +1,39 @@
+.body_home
+{
+	margin: 0;
+	background-color: black;
+}
+
+#home_photo
+{
+	width:100%;
+}
+
+.titre
+{
+	background-color: #ec8d0d;
+}
+
+.description
+{
+	background-color: #ec8d0d;
+	padding-bottom: 12%;
+
+}
+
+.description_titre h3{
+	padding-top:  ;	
+}
+
+#home
+{
+	background-color:black;
+}
+
+.orangeb
+{
+	background-color: #ec8d0d;
+}
+.text-center.orangeb>div{
+	overflow: hidden;
+}
