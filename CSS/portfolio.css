@@ -1,0 +1,150 @@
+
+body{
+	color: white;
+	background-color: #141417;
+	font-size: 1.6em;
+	font-family: arial;
+}
+h2{
+	color: white;
+}
+#ligne{
+	margin-top: 15px;
+}
+.container{
+	width: 100%;
+}
+
+
+li{
+	list-style-type: none;
+}
+#gl-item>img{
+	width:100%;
+	filter: grayscale();
+}
+#gl-item>img:hover{
+	filter: none;
+}
+#gl-item.col-lg-2.col-md-2.col-sm-4.col-xs-6{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#filter{
+	font-size: 16px;
+}
+#filter>a{
+	color: white;
+	text-decoration: none;
+}
+#filter>a:hover{
+	color: #eb8e0d;
+}
+#filter>a:active{
+	color: #eb8e0d;
+}
+
+#gallery-filters{
+	padding-bottom: 20px;
+}
+button.glp-readmore{
+	display:inline-block;
+	margin-left:auto;
+	margin-right: auto;
+}
+.btn{
+	font-size: 14px;
+}
+.btn-primary{
+	background-color: #141417;
+	border: 0px;
+	margin-top: 15px;
+}
+.btn-primary:hover{
+	background-color: #eb8e0d;
+}
+ .glp-close{
+ 	font-size:40px;
+ 	color: white;
+ 	float: right;
+}
+.gl-preview{
+	display: none;
+	background-color: #eb8e0d;
+	padding:15px;
+}
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.gl-preview-description{
+	margin-top: 10px;
+}
+.modal-content{
+	padding: 20px;
+	min-height: 450px;
+}
+.modal-content p{
+	padding-top: 15px;
+	color: black;
+}
+.modal-content img{
+	max-height: 420px;
+}
+/*Fin CSS Portfolio*/
+@media (min-width <= 992px){
+    .hidden{
+    	display: none !important;
+    }
+}
+@media (max-width: 384px) {
+    .col-xxs-1,
+    .col-xxs-2,
+    .col-xxs-3,
+    .col-xxs-4,
+    .col-xxs-5,
+    .col-xxs-6,
+    .col-xxs-7,
+    .col-xxs-8,
+    .col-xxs-9,
+    .col-xxs-10,
+    .col-xxs-11 {
+        float: left;
+    }
+    .col-xxs-1 {
+        width: 8.333333333333332%;
+    }
+    .col-xxs-2 {
+        width: 16.666666666666664%;
+    }
+    .col-xxs-3 {
+        width: 25%;
+    }
+    .col-xxs-4 {
+        width: 33.33333333333333%;
+    }
+    .col-xxs-5 {
+        width: 41.66666666666667%;
+    }
+    .col-xxs-6 {
+        width: 50%;
+    }
+    .col-xxs-7 {
+        width: 58.333333333333336%;
+    }
+    .col-xxs-8 {
+        width: 66.66666666666666%;
+    }
+    .col-xxs-9 {
+        width: 75%;
+    }
+    .col-xxs-10 {
+        width: 83.33333333333334%;
+    }
+    .col-xxs-11 {
+        width: 91.66666666666666%;
+    }
+    .col-xxs-12 {
+        width: 100%;
+    }
+ }
