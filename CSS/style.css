@@ -10,16 +10,16 @@ h1{
 #bouton{
 	padding-top: 10px;
 }
-button{
-	background-color: #ec8d0d;
-	margin-left: auto;
-	margin-right: auto;
-	border:0px;
-	font-size: 20px;
-	color:white;
-	padding-bottom: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+button.boutonCommon{
+	background-color: #ec8d0d !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	border:0px !important;
+	font-size: 20px !important;
+	color:white !important;
+	padding-bottom: 5px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
 }
 .textIntro{
 	height: 80px;
