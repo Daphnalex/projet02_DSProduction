@@ -19,16 +19,20 @@ h2{
 li{
 	list-style-type: none;
 }
-#gl-item>img{
+.gl-item>img{
 	width:100%;
 	filter: grayscale();
 }
-#gl-item>img:hover{
+.gl-item>img:hover{
 	filter: none;
 }
-#gl-item.col-lg-2.col-md-2.col-sm-4.col-xs-6{
+.gl-item.col-lg-2.col-md-2.col-sm-4.col-xs-6{
 	padding-left: 0px;
 	padding-right: 0px;
+}
+.col-lg-4.col-md-4{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 #filter{
 	font-size: 16px;
@@ -63,22 +67,44 @@ button.glp-readmore{
 .btn-primary:hover{
 	background-color: #eb8e0d;
 }
+.descriptif.btn{
+    font-size: 14px;
+}
+.descriptif.btn-primary{
+    background-color: #ffffff;
+    border: 0px;
+    margin-top: 15px;
+}
+.descriptif.btn-primary:hover{
+    background-color: #141417;
+}
  .glp-close{
  	font-size:40px;
  	color: white;
  	float: right;
 }
-.gl-preview{
-	display: none;
-	background-color: #eb8e0d;
-	padding:15px;
-}
+
 .container-fluid{
 	padding-left: 0px;
 	padding-right: 0px;
 }
 .gl-preview-description{
 	margin-top: 10px;
+}
+.gl-preview img{
+    max-height: 380px;
+}
+.gl-preview {
+    background-color: #eb8e0d;
+    padding:15px;
+    max-height: 420px;
+}
+.gl-item img{
+    width: 100%;
+}
+.gl-item{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .modal-content{
 	padding: 20px;
