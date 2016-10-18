@@ -19,14 +19,15 @@ h2{
 li{
 	list-style-type: none;
 }
-.gl-item>img{
+.preview-item{
 	width:100%;
 	filter: grayscale();
 }
-.gl-item>img:hover{
+.preview-item:hover{
 	filter: none;
+	cursor: pointer;
 }
-.gl-item.col-lg-2.col-md-2.col-sm-4.col-xs-6{
+.preview-item.col-lg-2.col-md-2.col-sm-4.col-xs-6{
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -43,6 +44,7 @@ li{
 }
 #filter>a:hover{
 	color: #eb8e0d;
+	cursor: pointer;
 }
 #filter>a:active{
 	color: #eb8e0d;
@@ -55,34 +57,26 @@ button.glp-readmore{
 	display:inline-block;
 	margin-left:auto;
 	margin-right: auto;
-}
-.btn{
-	font-size: 14px;
-}
-.btn-primary{
-	background-color: #141417;
-	border: 0px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #000;
+    font-size: 16px;
+    border: 0px;
 	margin-top: 15px;
 }
-.btn-primary:hover{
-	background-color: #eb8e0d;
-}
-.descriptif.btn{
-    font-size: 14px;
-}
-.descriptif.btn-primary{
-    background-color: #ffffff;
-    border: 0px;
-    margin-top: 15px;
-}
-.descriptif.btn-primary:hover{
-    background-color: #141417;
+
+button.glp-readmore:hover{
+	background-color: #333;
+	cursor: pointer;
 }
  .glp-close{
  	font-size:40px;
  	color: white;
  	float: right;
 }
+ .glp-close:hover{
+ 	cursor: pointer;
+ }
 
 .container-fluid{
 	padding-left: 0px;
@@ -92,17 +86,20 @@ button.glp-readmore{
 	margin-top: 10px;
 }
 .gl-preview img{
-    max-height: 380px;
+    width:100%;
 }
 .gl-preview {
     background-color: #eb8e0d;
     padding:15px;
-    max-height: 420px;
 }
-.gl-item img{
+.gl-preview-container{
     width: 100%;
 }
-.gl-item{
+#gl-preview-item{
+    top: -20px;
+}
+
+.col-lg-2,.col-md-2,.col-sm-4,.col-xs-6{
     padding-left: 0px;
     padding-right: 0px;
 }
