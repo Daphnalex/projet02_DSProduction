@@ -14,7 +14,13 @@ h2{
 .container{
 	width: 100%;
 }
+.hide {
+    display: none;
+}
 
+.show{
+    display : inline-block;
+}
 
 li{
 	list-style-type: none;
@@ -68,6 +74,7 @@ button.glp-readmore{
 button.glp-readmore:hover{
 	background-color: #333;
 	cursor: pointer;
+    text-decoration: none;
 }
  .glp-close{
  	font-size:40px;
@@ -113,6 +120,12 @@ button.glp-readmore:hover{
 }
 .modal-content img{
 	max-height: 420px;
+}
+.display {
+	display: block;
+}
+.displayNone {
+	display: none;
 }
 /*Fin CSS Portfolio*/
 @media (min-width <= 992px){

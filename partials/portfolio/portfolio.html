@@ -43,7 +43,7 @@
 	        				<img id="image1" class="preview-item img-responsive gl-photo" src="{{element.image}}" data-toggle="modal" data-target=".image1"/>
 	        			</a>
 	           		</div>
-			   		<div ng-if="($index % 6 == 5)" class="row-fluid" ng-repeat-end>
+			   		<div ng-if="($index % 6 == 5 || (element.id) % 10 + 5 === $index)" class="row-fluid" ng-repeat-end>
 				    	<div id="image1" class="gl-preview col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target=".image1">
 				        	<div class="col-lg-1 col-lg-offset-11 col-md-1 col-md-offset-11 col-sm-1 col-sm-offset-11 col-xs-1 col-xs-offset-11">
 				            	<a href="#" class="glp-close">×</a>
