@@ -175,6 +175,7 @@
 					let filtreCache = tableauPhoto[i].filtre;
 					angular.element(".displayNone").removeClass("displayNone");
 					angular.element('.'+ filtreCache).addClass('displayNone');
+					angular.element(".show").removeClass("show");
 				}
 			}
 			
