@@ -2,6 +2,8 @@
 	
 
 var app = angular.module('dsProd', []);
+
+//Mise à jour copyright 
 	app.controller('dateController', function(){
 			this.date = new Date();
 		
