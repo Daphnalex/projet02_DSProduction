@@ -57,9 +57,9 @@
 		</div>
 		<div class="row-fluid modal fade {{$index}}" ng-if="portfolioCtrl.page < 992" tabindex="-1" role="dialog" aria-labelledby="{{$index}}" ng-repeat-end>
 			<div class="modal-dialog modal-lg" role="document">
-				<div id={{$index}} class="modal-content gl-preview col-lg-12 col-md-12 col-sm-hidden col-xs-hidden">
+				<div id={{$index}} class="modal-content gl-preview col-lg-12 col-md-12 col-sm-hidden col-xs-hidden show">
 					<div class="row col-lg-1 col-lg-offset-11 col-md-1 col-md-offset-11 col-sm-1 col-sm-offset-11 col-xs-1 col-xs-offset-11">
-		            	<a class="glp-close">×</a>	
+		            	<a ng-click="portfolioCtrl.fermetureModale()" class="glp-close">×</a>	
 		        	</div>
 					<div class="row col-lg-4 col-md-4 gl-preview-container">
 						<div  id="gl-preview-item" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-if="portfolioCtrl.photoSelectionne.type ==='image'">
