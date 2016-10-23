@@ -1,7 +1,31 @@
 (function(){
 	var app = angular.module('dsProd', []);
 
+	//Controller pour copyright
+	app.controller('dateController', function(){
+			this.date = new Date();
+		
+	});
+
+
+	//directive de NavBar
+	app.directive("navBar", function(){
+		return{
+			restrict: 'EA',
+			templateUrl: "partials/common/nav.html"
+		}
+	});
+	//directive du footer
+	app.directive("piedPage", function(){
+		return{
+			restrict: 'EA',
+			templateUrl: "partials/common/footer.html"
+		}
+	});
+	
+	//Controller portfolio
 	app.controller('portfolioController', ['$window', function($window){
+		//objet filtres
 		this.filtres = [
 			{
 				name: 'all'
@@ -13,6 +37,7 @@
 				name: 'publicite'
 			}
 		];
+		//tableau d'objet : photo + détails
 		this.elements = [
 			{
 				imageMin: '../../IMG/portfolio/image1.png',
@@ -127,9 +152,11 @@
 				filtre: 'publicite'
 			}
 		];
+		//gestion du responsive
 		this.page = angular.element($window).width();
 		this.hauteurModal = angular.element($window).height()- 50;
 		
+		//repérer la photo sélectionnée et afficher le détail en fonction de sa position
 		this.photoSelectionne = null;
 		this.selectionPhoto = function(element, index, tableau){
 			this.photoSelectionne = element;
@@ -161,9 +188,11 @@
 				angular.element('#'+id).addClass("show");
 			}
 		};
+		//gestion de la fermeture du détail du portfolio
 		this.fermetureBloc = function(){
 			angular.element(".show").removeClass("show");
 		};
+		//gestion des filtres du portfolio
 		this.filtreSelectionne = null;
 		this.triPhoto = function(filtre, tableauPhoto){
 			this.elements = tableauPhoto ;
@@ -185,3 +214,4 @@
 		
 	}]);
 })();
+
