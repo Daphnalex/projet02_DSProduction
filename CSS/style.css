@@ -125,6 +125,9 @@ button.glp-readmore:hover{
 .modal-content img{
 	max-height: 420px;
 }
+.modal-header{
+    border-bottom: 0px solid;
+}
 .display {
 	display: block;
 }
