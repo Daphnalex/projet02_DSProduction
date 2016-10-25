@@ -1,9 +1,9 @@
 (function(){
-	var app = angular.module('dsProd', []);
+	var app = angular.module('dsprod', ['ngRoute']);
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider
 			.when('/', {
-				templateUrl: 'partials/videoIntro/intro.html'
+				templateUrl: 'partials/accueil/accueil.html'
 			})
 			.when('/accueil',{
 				templateUrl: 'partials/accueil/accueil.html'
@@ -11,7 +11,7 @@
 			.when('/serviceVideo',{
 				templateUrl: 'partials/services/serviceVideo.html'
 			})
-			.when('/serviceGraphisme', {
+			.when('/serviceGraphisme',{
 				templateUrl: 'partials/services/serviceGraphisme.html'
 			})
 			.when('/servicePhoto', {

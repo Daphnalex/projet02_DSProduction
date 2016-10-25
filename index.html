@@ -18,6 +18,8 @@
 <!--Latest compiled and minified Angular -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+
 <script type="text/javascript" src="JS/app.js"></script>
 
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -27,9 +29,11 @@
 </head>
 
 
-<body ng-app="dsProd">
+<body ng-app="dsprod">
 
-<main nav-bar></main>
+<nav-bar></nav-bar>
+
+<main ng-view></main>
 
 <footer pied-page></footer>
 

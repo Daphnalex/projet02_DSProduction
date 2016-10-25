@@ -1,6 +1,8 @@
 
 /* Début sidebar on hover*/
-
+  main {
+    flex: 1 0 auto;
+  }
 .logo{
   margin-top: 20px;
   margin-bottom: 20px;
