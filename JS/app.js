@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('dsProd', []);
+	var app = angular.module('dsprod', []);
 
 	//Controller pour copyright
 	app.controller('dateController', function(){
