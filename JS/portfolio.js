@@ -70,4 +70,9 @@ $(document).ready(function(){
 	})
 
 })
-
+$(document).ready(function(){
+	console.log('coucou');
+	$('.glp-close').click(function(){
+		$('.gl-preview.active').css({display:'none'});
+	});
+});
