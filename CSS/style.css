@@ -68,6 +68,10 @@ nav.sidebar .navbar-nav > li{
   color: #BFA169;
 }
 
+.navbar-default .navbar-nav>li>a:hover{
+    color: #F5F7E6 !important;
+}
+
 .navbar-nav>li>a {
   padding-bottom: 26px;
 }
@@ -82,6 +86,7 @@ nav.sidebar .navbar-nav > li{
 
     nav.sidebar:hover + .main{
       margin-left: 200px;
+
     }
 
     nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
@@ -140,6 +145,7 @@ nav.sidebar .navbar-nav > li{
 
     nav.sidebar:hover{
       margin-left: 0px;
+
     }
 
     .forAnimate{
@@ -231,7 +237,7 @@ footer{
 
  /*Fin footer*/
   
- body,html{
+body,html{
     height: 100%;
     background-color: #272A29;
   }
