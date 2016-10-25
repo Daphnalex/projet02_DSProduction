@@ -1,5 +1,35 @@
 (function(){
 	var app = angular.module('dsProd', []);
+	app.config(['$routeProvider', function($routeProvider){
+		$routeProvider
+			.when('/', {
+				templateUrl: 'partials/videoIntro/intro.html'
+			})
+			.when('/accueil',{
+				templateUrl: 'partials/accueil/accueil.html'
+			})
+			.when('/serviceVideo',{
+				templateUrl: 'partials/services/serviceVideo.html'
+			})
+			.when('/serviceGraphisme', {
+				templateUrl: 'partials/services/serviceGraphisme.html'
+			})
+			.when('/servicePhoto', {
+				templateUrl: 'partials/services/servicePhoto.html'
+			})
+			.when('/serviceEvenement',{
+				templateUrl: 'partials/services/serviceEvenement.html'
+			})
+			.when('/portfolio',{
+				templateUrl: 'partials/portfolio/portfolio_angular.html'
+			})
+			.when('/contact',{
+				templateUrl: 'partials/contact/contact.html'
+			})
+			.when('/aPropos',{
+				templateUrl: 'partials/aPropos/aPropos.html'
+			})
+	}]);
 
 	//Controller pour copyright
 	app.controller('dateController', function(){
@@ -20,6 +50,12 @@
 		return{
 			restrict: 'EA',
 			templateUrl: "partials/common/footer.html"
+		}
+	});
+	app.directive("portfolio", function(){
+		return{
+			restrict: 'EA',
+			templateUrl:"partials/portfolio/portfolio_angular.html"
 		}
 	});
 	
