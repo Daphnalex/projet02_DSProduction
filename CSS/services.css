@@ -8,7 +8,12 @@ body {
 
 .barre1 {
 	background-color: #e6e7df;
-	padding-bottom: 15px;
+	padding-bottom: 25px;
+}
+
+.descript {
+	padding-left: 30px;
+	padding-top: 30px;
 }
 
 .barreservices {
@@ -24,7 +29,7 @@ h2 {
 	font-size: 2.3em;
 	margin-top: 10px;
 	margin-right: 0px;
-	margin-left: 0px;
+	margin-left: 30px;
 	margin-bottom: 20px;
 	text-align: left;
 }
@@ -41,9 +46,14 @@ p {
 }
 
 ul {
-	margin-top: -12px;
 	margin-left: 20px;
+	margin-bottom: 20px;
 	font-size: 16px;
+}
+
+.exemple {
+	display : inline;
+	text-align: center;
 }
 
 button{
@@ -56,20 +66,30 @@ button{
 	margin-bottom: 15px;
 }
 
-button#orange{
-	background-color: #eb8e0d;
+.rowbut {
+	display: inline;
+	text-align: center;
 }
 
-button#black{
-	background-color: #191a1f ;
+button#num1{
+	background-color: #BFA169;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 210px;
+	height: 50px;
+	font-size: 19px;
 }
 
-button#black:hover{
-	background-color: #6E6E6E;
+button#num2{
+	background-color: #6d5b3b ;
 }
 
-button#orange:hover{
-	background-color: #FFC832;
+button#num2:hover{
+	background-color: #8e774d;
+}
+
+button#num1:hover{
+	background-color: #dbbc83;
 }
 
 .video>iframe{
@@ -78,8 +98,13 @@ button#orange:hover{
 }
 
 .barre2 {
-	background-color: #eb8e0d;
-	padding-bottom: 15px;
+	background-color: #BFA169;
+	padding-bottom: 25px;
+}
+
+.rea1 {
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .ytp-thumbnail-overlay-image{
@@ -107,7 +132,7 @@ h3 {
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.7;
-	display: inline;
+	display: block;
 	text-align: center;
 }
 
@@ -119,8 +144,8 @@ h3 {
 }
 
 .partner {
-	background-color: rgba(255,255,255,0.5);
-	width: 100%;
+	background-color: rgba(255,255,255,0.6);
+	width: 90%;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	padding-bottom: 15px;
@@ -145,10 +170,10 @@ h3 {
 }
 
 .barre4 {
-	background-color: #eb8e0d;
+	background-color: #BFA169;
 	padding-top: 5px;
 	display: block;
-padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
 #promo {
@@ -178,7 +203,7 @@ padding-bottom: 15px;
 
 	ul {
 
-	font-size: 16px;
+		font-size: 16px;
 	}
 
 	.confiance {
@@ -186,12 +211,12 @@ padding-bottom: 15px;
 	}
 
 	.barreservices {
-	background-color: #A5A5A5;
-	height: 2px;
-	margin-top: 20px;
-	margin-right: 25px;
-	margin-left: 0px;
-}
+		background-color: #A5A5A5;
+		height: 2px;
+		margin-top: 20px;
+		margin-right: 25px;
+		margin-left: 0px;
+	}
 
 }
 
@@ -218,16 +243,16 @@ padding-bottom: 15px;
 	}
 
 	.barreservices {
-	background-color: #A5A5A5;
-	height: 2px;
-	margin-top: 22px;
-	margin-right: 25px;
-	margin-left: 0px;
-}
-
+		background-color: #A5A5A5;
+		height: 2px;
+		margin-top: 22px;
+		margin-right: 25px;
+		margin-left: 0px;
 	}
 
-	@media screen and (min-width: 572px) and (max-width: 774px){
+}
+
+@media screen and (min-width: 572px) and (max-width: 774px){
 
 	h2 {
 		font-size: 1.2em;
@@ -249,20 +274,20 @@ padding-bottom: 15px;
 	}
 
 	.barreservices {
-	background-color: #A5A5A5;
-	height: 2px;
-	margin-top: 16px;
-	margin-right: 25px;
-	margin-left: 0px;
-}
+		background-color: #A5A5A5;
+		height: 2px;
+		margin-top: 16px;
+		margin-right: 25px;
+		margin-left: 0px;
+	}
 
 	.barreabout {
-	background-color: white;
-	height: 1px;
-	margin-top: 16px;
-	margin-right: 25px;
-	margin-left: 0px;	
-}
+		background-color: white;
+		height: 1px;
+		margin-top: 16px;
+		margin-right: 25px;
+		margin-left: 0px;	
+	}
 
 
 }
@@ -290,12 +315,12 @@ padding-bottom: 15px;
 	}
 
 	.barreservices {
-	background-color: #A5A5A5;
-	height: 2px;
-	margin-top: 24px;
-	margin-right: 25px;
-	margin-left: 0px;
-}
+		background-color: #A5A5A5;
+		height: 2px;
+		margin-top: 24px;
+		margin-right: 25px;
+		margin-left: 0px;
+	}
 
 }
 
@@ -321,11 +346,11 @@ padding-bottom: 15px;
 	}
 
 	.barreservices {
-	background-color: #A5A5A5;
-	height: 2px;
-	margin-top: 34px;
-	margin-right: 25px;
-	margin-left: 0px;
-}
+		background-color: #A5A5A5;
+		height: 2px;
+		margin-top: 34px;
+		margin-right: 25px;
+		margin-left: 0px;
+	}
 
 }
