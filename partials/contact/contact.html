@@ -9,66 +9,124 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".js-example-basic-multiple").select2();
+			$("span.select2-selection.select2-selection--multiple").addClass("col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4");
+			$('.select2-container--default').css({"width": "100%","color": "black"});
+			$('li').css({"color":"black"});
+		});		
+		</script>
 		<link rel="stylesheet" href="../../CSS/style_contact.css">
-	<title></title>
+	<title>Contact</title>
 </head>
 <body class="body_contact">
-	<h1 class="contact_title">Contact</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<h1 class="contact_title col-xxs-6 col-xs-5 col-sm-3 col-md-2 col-lg-2 contact_label">Contact</h1><hr id="hr_contact" class="contact-title col-xxs-3 col-xs-6 col-sm-7 col-md-9 col-lg-9 "/>
+		</div>
 	<!--Formulaire-->
-	<form>
+	<form class="contactForm">
 		<!--radio (checkbox) -->
-		<label class="radio-inline">
-  			<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Je suis un professionnel
-		</label>
-		<label class="radio-inline">
-			<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Je suis un particulier
-		</label>
-   		<!--nom de l'entreprise-->
-  		<div class="form-group" id="form">
-	    	<label for="NomDeLEntreprise">Nom de l'entreprise</label>
-	    	<input type="entreprise" class="form-control" id="entreprise" placeholder="">
- 		</div>
- 		<!--adresse-->
- 		<div class="form-group" id="form">
-	    	<label for="Adresse">Adresse</label>
-	    	<input type="entreprise" class="form-control" id="adresse" placeholder="">
- 		</div>
- 		<!--numéro de téléphone-->
-	  	<div class="form-group" id="form">
-	    	<label for="numero de telephone">Numéro de téléphone</label>
-	    	<input type="entreprise" class="form-control" id="exampleInputEmail1" placeholder="">
- 		</div>
- 		<!--Quel est votre projet-->
- 		<div class="container-fluid">
- 			<div class="row">
- 			<!--RAJOUTER DES BOUTOOOOOOOOOONS
- 				<div class="col-xs-3">
- 				<img src="" alt="">
- 				</div>
- 				<div class="col-xs-3">
- 				<img src="" alt="">
- 				</div>
- 				<div class="col-xs-3">
- 				<img src="" alt="">
- 				</div>
- 				<div class="col-xs-3">
- 				<img src="" alt="">
- 				</div>
- 				-->
- 			</div>
- 		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="radios col-xs-12 col-sm-8 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+					<div class="align" id="radio1">
+						<label class="radio-inline contact_label">
+				  			<input type="radio" name="inlineRadioOptions" class="color" id="inlineRadio1" value="option1">Je suis un professionnel
+						</label>
+					</div>
+					<div class="align" id="radio2">
+						<label class="radio-inline contact_label" id="radio-inline2">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Je suis un particulier
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- PARTIE ENTREPRISE -->
+		<div class="row">
+			<div id = entreprise>
+				<!--nom de l'entreprise-->
+				<div class="form-group">
+			    	<label for="NomDeLEntreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Nom de l'entreprise</label>
+			    	<input type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="nomEntreprise" placeholder="">
+				</div>
+				<!--adresse-->
+				<div class="form-group">
+			    	<label for="Adresse" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Adresse</label>
+			    	<input type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="adresse" placeholder="">
+				</div>
+				<!--numéro de téléphone-->
+		  		<div class="form-group">
+			    	<label for="numero de telephone" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Numéro de téléphone</label>
+			    	<input type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="telephoneEntreprise" placeholder="">
+				</div>
+			</div>
+		</div>
 
+		<!-- PARTIE PARTICULIER -->
+		<div class="row">
+			<div id ="particulier">
+				<!-- nom -->
+				<div class ="form-group" id="form">
+					<label for="NomDuParticulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre nom</label>
+					<input type="particulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="nomParticulier" placeholder="">
+				</div>
+				<!--adresse-->
+				<div class="form-group">
+					<label for="Adresse" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre adresse</label>
+					<input type="particulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="adresseParticulier" placeholder="">
+					</iput>
+				</div>
+				<!--numéro de téléphone-->
+				<div class="form-group">
+					<label for="numero de telephone" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre numéro de téléphone</label>
+					<input type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="telephoneParticulier" placeholder="">
+				</div>
+			</div>
+		</div>
 
- 		<!--Décrivez votre projet-->
- 		<div class="form-group" id="form">
- 			<label for="description">Décrivez votre projet</label>
- 			<br/>
-	 		<textarea rows="6" cols="75">
-	 		</textarea>
+		<!--Quel est votre projet-->
+		<div class="row">
+			<div class="form-group">
+				<label for="quelProjet" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Quel est votre projet?</label>
+				<select class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 input_contact js-example-basic-multiple" multiple="multiple">
+					<option class="font-black" value="Video">Vidéo</option>
+					<option class="font-black" value="Photo">Shooting photo</option>
+					<option class="font-black" value="Graphique">Réalisation graphique</option>
+					<option class="font-black" value="Evenement">Evénement</option>
+				</select>
+			</div>
+	 		<!--Décrivez votre projet-->
+	 		<div class="form-group textarea" id="form">
+	 			<label for="description" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Décrivez votre projet</label>
+	 			
+		 		<textarea class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact">
+		 		</textarea>
+		  	</div>
+		  	<!--bouton-->
+		  	<div class="form-group">
+		  		<button type="envoi" class="btn btn-default col-xs-8 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4 input_contact">Envoyez votre demande</button>
+		  	</div>
 	  	</div>
-	  	<!--bouton-->
-	  	<button type="envoi" class="btn btn-default">Envoyez votre demande</button>
 	</form>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 infos">	
+				<h6 class="mes_infos contact_label">Mon adresse : 16 avenue Général de Gaulle</h6>
+				<h6 class="mes_infos contact_label">Mon mail : mydsproduction@gmail.com</h6>
+				<h6 class="mes_infos contact_label">Mon téléphone : 03.86.21.90.78</h6>
+			</div>
+			<!-- googlemap -->
+			<iframe class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21774.371206480057!2d3.142219001872069!3d46.985333485361636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f04f5e20402f61%3A0x58f94858a803848!2s58000+Nevers!5e0!3m2!1sfr!2sfr!4v1476889443187" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
 </body>
 </html>
