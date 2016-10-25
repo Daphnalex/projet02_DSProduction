@@ -70,6 +70,10 @@ nav.sidebar .navbar-nav > li{
   color: #BFA169;
 }
 
+.navbar-default .navbar-nav>li>a:hover{
+    color: #F5F7E6 !important;
+}
+
 .navbar-nav>li>a {
   padding-bottom: 26px;
 }
