@@ -1,7 +1,6 @@
 (function(){
 	var app = angular.module('dsProd', []);
 
-<<<<<<< HEAD
 	//Controller pour copyright
 	app.controller('dateController', function(){
 			this.date = new Date();
