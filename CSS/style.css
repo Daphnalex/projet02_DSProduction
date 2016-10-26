@@ -467,6 +467,10 @@ button.boutonCommon{
   margin-top:600px;
 }
 
+.black{
+  color: black;
+}
+
 .body_home{
   background-color: black;
 }
@@ -519,7 +523,7 @@ button.boutonCommon{
 }
 
 .service {
-  writing-mode :sideways-lr;
+  writing-mode :vertical-rl;
 }
 
 .bouton{

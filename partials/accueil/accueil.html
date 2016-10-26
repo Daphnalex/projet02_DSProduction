@@ -10,7 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 	<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../../CSS/style.css">
+		<link rel="stylesheet" href="../../CSS/style_home.css">
 
 	<title></title>
 </head>
@@ -20,7 +20,7 @@
 			<!--Intitulé my ds production-->
 			<div class=" titre col-xs-12 col-sm-6">
 				<div class="text-center orangeb">
-					<h1>My Ds</h1><h2>Production</h2>				
+					<h1 style="color:black">My Ds</h1><h2 style="color:black">Production</h2>				
 				</div>
 			</div>
 				<!--Description-->
@@ -33,129 +33,37 @@
 			</div>
 		</div>
 		<!--Selection de service-->
-		<div class="row" id="home">
+		<div ng-controller='homeController as homeCtrl' class="row" id="home">
 
 		<!-- video -->
-			<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+
+			<div ng-repeat="service in homeCtrl.servicesResponsive" class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
 				<div class="text-center orangeb">
 					<div class="bloc">
-						<img class="home_photo" src="../../IMG/video_test.png" alt="Réalisation video">
+						<a href="{{service.bouton}}">
+							<img class="home_photo" src="{{service.image}}" alt="Réalisation video">
+						</a>
 						<div class="auDessus">
 							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Réalisation vidéo</h4>	
-							</div>
-							<div class="bouton row-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
+								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">{{service.titre}}</h4>	
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+
+			<div ng-repeat="service in homeCtrl.services"  class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-xl-3">
 				<div class="text-center orangeb">
 					<div class="bloc">
-						<img class="home_photo" src="../../IMG/img1.png" alt="Réalisation video">
+						<img class="home_photo" src="{{service.image}}" alt="Réalisation video">
 						<div class="auDessus">
 							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Réalisation vidéo</h4>
+								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">{{service.titre}}</h4>
 								
 							</div>
 							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- photo -->
-			<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/photo_test.jpg" alt="Shooting photo">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Shooting photos</h4>
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-xl-3">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/img2.png" alt="Shooting photo">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Shooting photos</h4>
-								
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- graphique -->
-			<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/graph.jpg" alt="Création graphique">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Création graphique</h4>
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-xl-3">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/img3.jpg" alt="Création graphique">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Création graphique</h4>
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- evenements -->
-			<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/champ_test.jpg" alt="événements">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Evénements</h4>
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-xl-3">
-				<div class="text-center orangeb">
-					<div class="bloc">
-						<img class="home_photo" src="../../IMG/img4.jpg" alt="événements">
-						<div class="auDessus">
-							<div class="title_btn">
-								<h4 class="service col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-12" style="height: 100%">Evénements</h4>
-							</div>
-							<div class="bouton row-fluid  col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button>En savoir plus</button>
+								<a href={{service.bouton}}><button>En savoir plus</button></a>
 							</div>
 						</div>
 					</div>

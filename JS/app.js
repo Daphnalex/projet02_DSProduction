@@ -261,4 +261,47 @@
 		};
 		
 	}]);
+
+app.controller('homeController', function(){
+	this.services=[
+	{
+		image: "IMG/img1.png",
+		titre: "Réalisation vidéo",
+		bouton: "#/serviceVideo"
+	},{
+		image: "IMG/img2.png",
+		titre: "Shooting photos",
+		bouton: "#/servicePhoto"
+	},{
+		image: "IMG/img3.jpg",
+		titre: "Création graphique",
+		bouton: "#/serviceGraphisme"
+	},{
+		image: "IMG/img4.jpg",
+		titre: "Evénements",
+		bouton: "#/serviceEvenement"
+	}
+	];
+
+	this.servicesResponsive=[
+	{
+		image: "IMG/video_test.png",
+		titre: "Réalisation vidéo",
+		bouton: "#/serviceVideo"
+	},{
+		image: "IMG/photo_test.jpg",
+		titre: "Shooting photos",
+		bouton: "#/servicePhoto"
+	},{
+		image: "IMG/graph.jpg",
+		titre: "Création graphique",
+		bouton: "#/serviceGraphisme"
+	},{
+		image: "IMG/champ_test.jpg",
+		titre: "Evénements",
+		bouton: "#/serviceEvenement"
+	}
+	];
+});
+
 })();

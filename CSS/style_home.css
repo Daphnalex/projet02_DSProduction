@@ -1,7 +1,5 @@
 body{
-<<<<<<< HEAD
 	font-family: raleway;
-=======
 	color: white;
 	font-family: 'OpenSans';
 }
@@ -47,7 +45,6 @@ button.boutonCommon{
 #services{
 	text-align: center;
 	margin-top:600px;
->>>>>>> 470f17fc33cc807812d9790541eb12d44c6b2e57
 }
 
 .body_home{
@@ -99,17 +96,14 @@ button.boutonCommon{
 
 .title_btn{
 	position: absolute;
-	/*bottom: 200px;*/
 	width : 100%;
 	height: 100%;
 	bottom: 0;
 	color: white;
 }
-.auDessus{
-	/*display: none;*/
-}
+
 .service {
-	writing-mode :sideways-lr;
+	writing-mode :vertical-lr;
 
 }
 
