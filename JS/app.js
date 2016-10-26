@@ -99,6 +99,79 @@ app.directive("bloc4", function(){
 			templateUrl:"partials/portfolio/portfolio_angular.html"
 		}
 	});
+
+	app.controller('ServController', function(){
+
+		this.video = [
+		{
+			presentation : 'Nous produisons vos vidéos que ce soit des :'
+		},
+		{
+			liste1: 'spots de publicité'
+		},
+		{
+			liste2: 'Clips musicaux'
+		},
+		{
+			liste3: 'Reportages'
+		},
+		{
+			liste4: 'Interviews'
+		},
+		{
+			liste5: 'Drône'
+		},
+		{
+			infoTarif: 'Les tarifs ne sont pas fixés par type de service'
+		},
+		{
+			drône: "L'utilisation d'un drône est réglementée"
+		},
+		{
+			dernièreRéalisation: "https://www.youtube.com/embed/2fSzpdY8ABw"
+		},
+		{
+			pub1: "Mercedes"
+		},
+		{
+			descripub1: "Réalisation d'une publicité pour la nouvelle gamme de voitures Mercedes Benz. Une voiture alliant la puissance d'une sportive et le confort d'une familiale. De nombreuses options seront disponibles et le tout pour un prix des plus modiques."
+		},
+		{
+			spot1: "https://www.youtube.com/embed/RYrN17-apQQ"
+		},
+		{
+			pub2: "Drône"
+		},
+		{
+			descripub2: "Réalisation d'une video haute altitude avec notre drône. La stabilité de l'appareil et la qualité de l'image font de cet outil un atout précieux pour la prise de plans larges, pour vos évènements ou autres besoins circonstanciels."
+		},
+		{
+			spot2: "https://www.youtube.com/embed/zpy8MlI7QnM"
+		},
+		{
+			pub3: 'Le Riad'
+		},
+		{
+			descripub3: 'Video promotionnelle pour mettre en avant "Le Riad", le nouveau Restaurant/Salon de thé en vogue. Ce coin de Méditerranée, niché au cœur de Nevers, vous emmènera en voyage avec ses thés à la menthe et ses pâtisseries aux saveurs douces et envoûtantes.'
+		},
+		{
+			confiance: 'Ils nous ont fait confiance'
+		},
+		{
+			avis1: "Nous travaillons régulièrement avec l'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme."
+		},
+		{
+			avis2: "Nous travaillons régulièrement avec l'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme."
+		},
+		{
+			avis3: "Nous travaillons régulièrement avec l'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme."
+		},
+		{
+			promo: "Vous souhaitez réaliser votre vidéo ?"
+		}
+		]
+	
+});	
 	
 	//Controller portfolio
 	app.controller('portfolioController', ['$window', function($window){
@@ -239,11 +312,6 @@ app.directive("bloc4", function(){
 		//repérer la photo sélectionnée et afficher le détail en fonction de sa position
 		this.page = angular.element($window).width();
 		this.hauteurModal = angular.element($window).height()- 50;
-		
-app.controller('ServController', function(){
-	
-});	
-
 		this.photoSelectionne = null;
 		this.selectionPhoto = function(element, index, tableau){
 			this.photoSelectionne = element;
