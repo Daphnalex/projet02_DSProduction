@@ -3,31 +3,32 @@
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider
 			.when('/', {
-				templateUrl: 'partials/accueil/accueil.html'
+				templateUrl: 'partials/accueil/accueil.html',
 			})
 			.when('/accueil',{
-				templateUrl: 'partials/accueil/accueil.html'
+				templateUrl: 'partials/accueil/accueil.html',
 			})
 			.when('/serviceVideo',{
-				templateUrl: 'partials/services/serviceVideo.html'
+				templateUrl: 'partials/services/serviceVideo.html',
 			})
 			.when('/serviceGraphisme',{
-				templateUrl: 'partials/services/serviceGraphisme.html'
+				templateUrl: 'partials/services/serviceGraphisme.html',
 			})
 			.when('/servicePhoto', {
-				templateUrl: 'partials/services/servicePhoto.html'
+				templateUrl: 'partials/services/servicePhoto.html',
 			})
 			.when('/serviceEvenement',{
-				templateUrl: 'partials/services/serviceEvenement.html'
+				templateUrl: 'partials/services/serviceEvenement.html',
 			})
 			.when('/portfolio',{
-				templateUrl: 'partials/portfolio/portfolio_angular.html'
+				templateUrl: 'partials/portfolio/portfolio_angular.html',
+				controller: 'portfolioController',
 			})
 			.when('/contact',{
-				templateUrl: 'partials/contact/contact.html'
+				templateUrl: 'partials/contact/contact.html',
 			})
 			.when('/aPropos',{
-				templateUrl: 'partials/aPropos/aPropos.html'
+				templateUrl: 'partials/aPropos/aPropos.html',
 			})
 	}]);
 
@@ -78,113 +79,113 @@
 		//tableau d'objet : photo + détails
 		this.elements = [
 			{
-				imageMin: '../../IMG/portfolio/image1.png',
-				media: '../../IMG/portfolio/image1.png',
+				imageMin: 'IMG/portfolio/image1.png',
+				media: 'IMG/portfolio/image1.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image2.png',
-				media: '../../IMG/portfolio/image2.png',
+				imageMin: 'IMG/portfolio/image2.png',
+				media: 'IMG/portfolio/image2.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image3.png',
-				media: '../../IMG/portfolio/image3.png',
+				imageMin: 'IMG/portfolio/image3.png',
+				media: 'IMG/portfolio/image3.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image4.png',
-				media: '../../IMG/portfolio/image4.png',
+				imageMin: 'IMG/portfolio/image4.png',
+				media: 'IMG/portfolio/image4.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image5.png',
-				media: '../../IMG/portfolio/image5.png',
+				imageMin: 'IMG/portfolio/image5.png',
+				media: 'IMG/portfolio/image5.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image6.png',
-				media: '../../IMG/portfolio/image6.png',
+				imageMin: 'IMG/portfolio/image6.png',
+				media: 'IMG/portfolio/image6.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image7.png',
-				media: '../../IMG/portfolio/image7.png',
+				imageMin: 'IMG/portfolio/image7.png',
+				media: 'IMG/portfolio/image7.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/video1.png',
-				media: '../../VIDEO/portfolio/video1.mp4',
+				imageMin: 'IMG/portfolio/video1.png',
+				media: 'VIDEO/portfolio/video1.mp4',
 				type: 'video',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'publicite'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image1.png',
-				media: '../../IMG/portfolio/image1.png',
+				imageMin: 'IMG/portfolio/image1.png',
+				media: 'IMG/portfolio/image1.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image2.png',
-				media: '../../IMG/portfolio/image2.png',
+				imageMin: 'IMG/portfolio/image2.png',
+				media: 'IMG/portfolio/image2.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image3.png',
-				media: '../../IMG/portfolio/image3.png',
+				imageMin: 'IMG/portfolio/image3.png',
+				media: 'IMG/portfolio/image3.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image4.png',
-				media: '../../IMG/portfolio/image4.png',
+				imageMin: 'IMG/portfolio/image4.png',
+				media: 'IMG/portfolio/image4.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image5.png',
-				media: '../../IMG/portfolio/image5.png',
+				imageMin: 'IMG/portfolio/image5.png',
+				media: 'IMG/portfolio/image5.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image6.png',
-				media: '../../IMG/portfolio/image6.png',
+				imageMin: 'IMG/portfolio/image6.png',
+				media: 'IMG/portfolio/image6.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/image7.png',
-				media: '../../IMG/portfolio/image7.png',
+				imageMin: 'IMG/portfolio/image7.png',
+				media: 'IMG/portfolio/image7.png',
 				type: 'image',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'book'
 			},
 			{
-				imageMin: '../../IMG/portfolio/video1.png',
-				media: '../../VIDEO/portfolio/video1.mp4',
+				imageMin: 'IMG/portfolio/video1.png',
+				media: 'VIDEO/portfolio/video1.mp4',
 				type: 'video',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
 				filtre: 'publicite'

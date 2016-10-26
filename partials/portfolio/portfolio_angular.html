@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>My DS Production</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../CSS/style.css">
-  
- 
-</head>
-<body class="container-fluid" ng-app="dsProd" ng-controller="portfolioController as portfolioCtrl" id="preview gallery" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+<div class="container-fluid" ng-controller="portfolioController as portfolioCtrl" id="preview gallery" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<div class="row-fluid" id="entete">
 		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
 			<h2><span>PORTFOLIO</span></h2>
@@ -70,7 +61,7 @@
 							<img class="img-responsive col-lg-3 col-lg-offset-6 col-md-3 col-md-offset-6 col-lg-offset-6 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3" src="{{portfolioCtrl.photoSelectionne.media}}"/>
 						</div>
 						<div id="gl-preview-item" class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-6 col-xs-12" ng-if="portfolioCtrl.photoSelectionne.type ==='video'">
-							<video src="{{portfolioCtrl.photoSelectionne.media}}" width="100%" controls/>
+							<video src="{{portfolioCtrl.photoSelectionne.media}}" width="100%" controls></video>
 						</div>
 						<div class="gl-preview-description col-lg-offset-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<p>{{portfolioCtrl.photoSelectionne.description}}</p>
@@ -84,14 +75,4 @@
 			</div>
 		</div>
 	</div>
-	
-  	<footer>
-  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-		<script src="../../JS/app.js"></script>
-	</footer>
-</body>
-
-</html>
+</div>
