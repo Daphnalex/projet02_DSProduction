@@ -1,0 +1,277 @@
+textarea
+{
+ resize: none;
+}
+
+.align
+{
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#hr_contact{
+	margin-top: 40px;
+	border-top: 1px solid white;
+}
+
+.mes_infos{
+	font-size: 24px;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.infos{
+	background-color: #293133;
+	margin-top: 5%;
+	margin-left: 5%;
+
+}
+
+.input_contact{
+	margin-bottom: 2%;
+}
+
+.body_contact{
+	background-color: black;
+	
+}
+
+.font-black{
+	font-color: black;
+}
+
+#map{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.contact_label{
+	color: white;
+}
+
+.btn{
+		margin-top: 3%;
+	}
+
+@media screen and (max-width: 767PX ) and (min-width:300PX){
+	.body_contact{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.mes_infos{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 384px) {
+    .col-xxs-1,
+    .col-xxs-2,
+    .col-xxs-3,
+    .col-xxs-4,
+    .col-xxs-5,
+    .col-xxs-6,
+    .col-xxs-7,
+    .col-xxs-8,
+    .col-xxs-9,
+    .col-xxs-10,
+    .col-xxs-11 {
+        float: left;
+    }
+    .col-xxs-1 {
+        width: 8.333333333333332%;
+    }
+
+    .col-xxs-2 {
+        width: 16.666666666666664%;
+    }
+
+    .col-xxs-3 {
+        width: 25%;
+    }
+
+    .col-xxs-4 {
+        width: 33.33333333333333%;
+    }
+
+    .col-xxs-5 {
+        width: 41.66666666666667%;
+    }
+
+    .col-xxs-6 {
+        width: 50%;
+    }
+
+    .col-xxs-7 {
+        width: 58.333333333333336%;
+    }
+
+    .col-xxs-8 {
+        width: 66.66666666666666%;
+    }
+
+    .col-xxs-9 {
+        width: 75%;
+    }
+
+    .col-xxs-10 {
+        width: 83.33333333333334%;
+    }
+
+    .col-xxs-11 {
+        width: 91.66666666666666%;
+    }
+
+    .col-xxs-12 {
+        width: 100%;
+    }
+    
+
+/*
+#body_contact
+{
+	margin: 0 auto;
+	width: 100%;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+
+#contact_title h1
+{
+	margin: 20px;
+}
+
+#radio-inline
+{
+	display: inline-block;
+	margin : 0 auto;
+}
+
+.form-group
+{
+	margin: 0 auto;
+	margin-top: 2%;
+	width:400px;
+	margin-bottom: 2%;
+}
+
+.btn .btn-default{
+	margin: 0 auto;
+}
+
+.contactForm{
+	margin: 0 auto;
+}
+
+.contact-title{
+	vertical-align: middle; 
+}
+
+.form-control .textA{
+	width: 100%;
+	height: 100% !important;
+}
+
+#hr_contact{
+	margin-top: 40px;
+	border-top: 1px solid black;
+}
+
+.js-example-basic-multiple{
+	width :100%;
+	margin: 0 auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.mes_infos{
+	font-size: 40px;
+	margin-top: 5%;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 700px){
+	.body_contact{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.form-group{
+		width : 80%;
+		margin-top: 4%;
+	}
+
+	.js-example-basic-multiple{
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 461px){
+
+	#radio-inline2{
+		margin-left: -0px;
+	}
+}
+
+@media (max-width: 384px) {
+    .col-xxs-1,
+    .col-xxs-2,
+    .col-xxs-3,
+    .col-xxs-4,
+    .col-xxs-5,
+    .col-xxs-6,
+    .col-xxs-7,
+    .col-xxs-8,
+    .col-xxs-9,
+    .col-xxs-10,
+    .col-xxs-11 {
+        float: left;
+    }
+    .col-xxs-1 {
+        width: 8.333333333333332%;
+    }
+
+    .col-xxs-2 {
+        width: 16.666666666666664%;
+    }
+
+    .col-xxs-3 {
+        width: 25%;
+    }
+
+    .col-xxs-4 {
+        width: 33.33333333333333%;
+    }
+
+    .col-xxs-5 {
+        width: 41.66666666666667%;
+    }
+
+    .col-xxs-6 {
+        width: 50%;
+    }
+
+    .col-xxs-7 {
+        width: 58.333333333333336%;
+    }
+
+    .col-xxs-8 {
+        width: 66.66666666666666%;
+    }
+
+    .col-xxs-9 {
+        width: 75%;
+    }
+
+    .col-xxs-10 {
+        width: 83.33333333333334%;
+    }
+
+    .col-xxs-11 {
+        width: 91.66666666666666%;
+    }
+
+    .col-xxs-12 {
+        width: 100%;
+    }
+    
