@@ -1,10 +1,254 @@
-main {
-    flex: 1 0 auto;
-}
+
+/*Balise Principale*/
+
 body,html{
     height: 100%;
     background-color: #272A29;
+    margin:0;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h2 {
+  color: black;
+  font-size: 2.3em;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+h3 {
+  color: white;
+  font-size: 28px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+p {
+  margin-bottom: 0px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+ul {
+  margin-top: -12px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+button{
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+button#orange{
+  background-color: #eb8e0d;
+}
+
+button#black{
+  background-color: #191a1f ;
+}
+
+button#black:hover{
+  background-color: #6E6E6E;
+}
+
+button#orange:hover{
+  background-color: #FFC832;
+}
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+
+/*Fin balise principale*/
+
+
+/* 2 Media Queries*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+
+  h2 {
+    font-size: 2em;
   }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  ul {
+
+  font-size: 16px;
+  }
+
+  .confiance {
+    font-size: 25px;
+  }
+
+  .barreservices {
+  background-color: #A5A5A5;
+  height: 2px;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-left: 0px;
+}
+
+}
+
+@media screen and (min-width: 775px) and (max-width: 991px){
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  ul {
+    font-size: 15px;
+  }
+
+  .confiance {
+    font-size: 23px;
+  }
+
+  .barreservices {
+    background-color: #A5A5A5;
+    height: 2px;
+    margin-top: 22px;
+    margin-right: 25px;
+    margin-left: 0px;
+  }
+
+}
+
+@media screen and (min-width: 572px) and (max-width: 774px){
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    font-size: 14px;
+  }
+  .confiance {
+    font-size: 20px;
+  }
+
+  .barreservices {
+    background-color: #A5A5A5;
+    height: 2px;
+    margin-top: 16px;
+    margin-right: 25px;
+    margin-left: 0px;
+  }
+
+  .barreabout {
+    background-color: white;
+    height: 1px;
+    margin-top: 16px;
+    margin-right: 25px;
+    margin-left: 0px; 
+  }
+
+
+}
+
+
+@media screen and (min-width: 434px) and (max-width: 571px){
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    font-size: 14px;
+  }
+  .confiance {
+    font-size: 20px;
+  }
+
+  .barreservices {
+  background-color: #A5A5A5;
+  height: 2px;
+  margin-top: 24px;
+  margin-right: 25px;
+  margin-left: 0px;
+}
+
+}
+
+@media screen and (max-width: 433px) {
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    font-size: 14px;
+  }
+  .confiance {
+    font-size: 20px;
+  }
+
+  .barreservices {
+  background-color: #A5A5A5;
+  height: 2px;
+  margin-top: 34px;
+  margin-right: 25px;
+  margin-left: 0px;
+}
+
+}
+
+
+/*Fin media Queries*/
+
+
 /* Début sidebar on hover*/
 
 .logo{

@@ -4,34 +4,42 @@
 		$routeProvider
 			.when('/', {
 				templateUrl: 'partials/accueil/accueil.html',
+				css: 'CSS/style_home.css'
 			})
 			.when('/accueil',{
 				templateUrl: 'partials/accueil/accueil.html',
+				css:'CSS/style_home.css'
 			})
 			.when('/serviceVideo',{
 				templateUrl: 'partials/services/serviceVideo.html',
+				css:'CSS/services.css'
 			})
 			.when('/serviceGraphisme',{
 				templateUrl: 'partials/services/serviceGraphisme.html',
+				css:'CSS/services.css'
 			})
 			.when('/servicePhoto', {
 				templateUrl: 'partials/services/servicePhoto.html',
+				css:'CSS/services.css'
 			})
 			.when('/serviceEvenement',{
 				templateUrl: 'partials/services/serviceEvenement.html',
+				css:'CSS/services.css'
 			})
 			.when('/portfolio',{
 				templateUrl: 'partials/portfolio/portfolio_angular.html',
 				controller: 'portfolioController',
+				css:'CSS/style.css'
 			})
 			.when('/contact',{
 				templateUrl: 'partials/contact/contact.html',
+				css:'CSS/services.css'
 			})
 			.when('/aPropos',{
 				templateUrl: 'partials/aPropos/aPropos.html',
+				css:'CSS/aPropos.css'
 			})
 	}]);
-
 
 	//Controller pour copyright
 	app.controller('dateController', function(){
@@ -262,47 +270,4 @@
 		};
 		
 	}]);
-
-app.controller('homeController', function(){
-	this.services=[
-	{
-		image: "IMG/img1.png",
-		titre: "Réalisation vidéo",
-		bouton: "#/serviceVideo"
-	},{
-		image: "IMG/img2.png",
-		titre: "Shooting photos",
-		bouton: "#/servicePhoto"
-	},{
-		image: "IMG/img3.jpg",
-		titre: "Création graphique",
-		bouton: "#/serviceGraphisme"
-	},{
-		image: "IMG/img4.jpg",
-		titre: "Evénements",
-		bouton: "#/serviceEvenement"
-	}
-	];
-
-	this.servicesResponsive=[
-	{
-		image: "IMG/video_test.png",
-		titre: "Réalisation vidéo",
-		bouton: "#/serviceVideo"
-	},{
-		image: "IMG/photo_test.jpg",
-		titre: "Shooting photos",
-		bouton: "#/servicePhoto"
-	},{
-		image: "IMG/graph.jpg",
-		titre: "Création graphique",
-		bouton: "#/serviceGraphisme"
-	},{
-		image: "IMG/champ_test.jpg",
-		titre: "Evénements",
-		bouton: "#/serviceEvenement"
-	}
-	];
-});
-
 })();
