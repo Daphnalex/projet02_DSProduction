@@ -1,74 +1,98 @@
 (function(){
-	var app = angular.module('dsprod', ['ngRoute']);
+	var app = angular.module('dsprod', ['ngRoute','ngSanitize','ui.bootstrap']);
+	//ROUTES
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider
 			.when('/', {
-				templateUrl: 'partials/accueil/accueil.html',
-				css: 'CSS/style_home.css'
+				templateUrl: 'partials/home/home.html'
 			})
-			.when('/accueil',{
-				templateUrl: 'partials/accueil/accueil.html',
-				css:'CSS/style_home.css'
+			.when('/home', {
+				templateUrl: 'partials/home/home.html'
 			})
-			.when('/serviceVideo',{
-				templateUrl: 'partials/services/serviceVideo.html',
-				css:'CSS/services.css'
+			.when('/portfolio', {
+				templateUrl: 'partials/portfolio/portfolio.html'
 			})
-			.when('/serviceGraphisme',{
-				templateUrl: 'partials/services/serviceGraphisme.html',
-				css:'CSS/services.css'
+			.when('/serviceVideo', {
+				templateUrl: 'partials/services/serviceVideo.html'
 			})
-			.when('/servicePhoto', {
-				templateUrl: 'partials/services/servicePhoto.html',
-				css:'CSS/services.css'
+			.when('/serviceShooting', {
+				templateUrl: 'partials/services/serviceShooting.html'
 			})
-			.when('/serviceEvenement',{
-				templateUrl: 'partials/services/serviceEvenement.html',
-				css:'CSS/services.css'
+			.when('/serviceGraphisme', {
+				templateUrl: 'partials/services/serviceGraphisme.html'
 			})
-			.when('/portfolio',{
-				templateUrl: 'partials/portfolio/portfolio_angular.html',
-				controller: 'portfolioController',
-				css:'CSS/style.css'
+			.when('/serviceEvenement', {
+				templateUrl: 'partials/services/serviceEvenement.html'
 			})
-			.when('/contact',{
-				templateUrl: 'partials/contact/contact.html',
-				css:'CSS/services.css'
-			})
-			.when('/aPropos',{
-				templateUrl: 'partials/aPropos/aPropos.html',
-				css:'CSS/aPropos.css'
+			.when('/contact', {
+				templateUrl: 'partials/contact/contact.html'
 			})
 	}]);
-
-	//Controller pour copyright
-	app.controller('dateController', function(){
-			this.date = new Date();
-		
-	});
-
-
-	//directive de NavBar
-	app.directive("navBar", function(){
-		return{
-			restrict: 'EA',
-			templateUrl: "partials/common/nav.html"
+	//DIRECTIVES
+	app.directive('navbar', function(){
+		return {
+			restrict: 'AE',
+			templateUrl: 'partials/common/nav.html'
 		}
 	});
-	//directive du footer
-	app.directive("piedPage", function(){
-		return{
-			restrict: 'EA',
-			templateUrl: "partials/common/footer.html"
+	app.directive('pied', function(){
+		return {
+			restrict: 'AE',
+			templateUrl: 'partials/common/footer.html'
 		}
 	});
-	app.directive("portfolio", function(){
-		return{
-			restrict: 'EA',
-			templateUrl:"partials/portfolio/portfolio_angular.html"
-		}
-	});
-	
+
+
+	//Controlleur home
+	app.controller('homeController', function(){
+		this.titre = {
+			accroche: 'Votre agence publicitaire et audiovisuelle'
+		};
+		this.services=[
+		{
+			titre:"Réalisation vidéo",
+			image: "IMG/img1.png",
+			lien:"#/serviceVideo"
+		},
+		{
+			titre:"Shooting photo",
+			image: "IMG/img2.png",
+			lien:"#/serviceShooting"
+		},
+		{
+			titre:"Création graphique",
+			image: "IMG/img3.jpg",
+			lien:"#/serviceGraphisme"
+		},
+		{
+			titre:"Evènementiels",
+			image: "IMG/img4.jpg",
+			lien:"#/serviceEvenement"
+		}];
+		this.servicesResponsive=[
+		{
+			titre:"Réalisation vidéo",
+			image: "IMG/video_test.png",
+			lien:"#/serviceVideo"
+		},
+		{
+			titre:"Shooting photo",
+			image: "IMG/photo_test.jpg",
+			lien:"#/serviceShooting"
+		},
+		{
+			titre:"Création graphique",
+			image: "IMG/graph.jpg",
+			lien:"#/serviceGraphisme"
+		},
+		{
+			titre:"Evènementiels",
+			image: "IMG/champ_test.jpg",
+			lien:"#/serviceEvenement"
+		}];
+
+	});//FIN controlleur home
+
 	//Controller portfolio
 	app.controller('portfolioController', ['$window', function($window){
 		//objet filtres
@@ -90,114 +114,130 @@
 			{
 				imageMin: 'IMG/portfolio/image1.png',
 				media: 'IMG/portfolio/image1.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image2.png',
 				media: 'IMG/portfolio/image2.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image3.png',
 				media: 'IMG/portfolio/image3.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image4.png',
 				media: 'IMG/portfolio/image4.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image5.png',
 				media: 'IMG/portfolio/image5.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image6.png',
 				media: 'IMG/portfolio/image6.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image7.png',
 				media: 'IMG/portfolio/image7.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/video1.png',
 				media: 'VIDEO/portfolio/video1.mp4',
 				type: 'video',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'publicite'
+				filtre: 'publicite',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image1.png',
 				media: 'IMG/portfolio/image1.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image2.png',
 				media: 'IMG/portfolio/image2.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image3.png',
 				media: 'IMG/portfolio/image3.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image4.png',
 				media: 'IMG/portfolio/image4.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image5.png',
 				media: 'IMG/portfolio/image5.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image6.png',
 				media: 'IMG/portfolio/image6.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/image7.png',
 				media: 'IMG/portfolio/image7.png',
-				type: 'image',
+				type: 'photographie',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'book'
+				filtre: 'book',
+				active: 'false'
 			},
 			{
 				imageMin: 'IMG/portfolio/video1.png',
 				media: 'VIDEO/portfolio/video1.mp4',
 				type: 'video',
 				description : 'We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.',
-				filtre: 'publicite'
+				filtre: 'publicite',
+				active: 'false'
 			}
 		];
 
@@ -241,19 +281,19 @@
 				angular.element('#'+id).addClass("show");
 			}
 		};
+	
+
 
 		//gestion de la fermeture du détail du portfolio
 		this.fermetureBloc = function(){
 			angular.element(".show").removeClass("show");
 		};
 		//gestion des filtres du portfolio
-		this.fermetureBloc = function(){
-			angular.element(".show").removeClass("show");
-		};
+
 		this.filtreSelectionne = null;
 		this.triPhoto = function(filtre, tableauPhoto){
 			this.elements = tableauPhoto ;
-			this.filtreSelectionne = filtre;
+			this.filtreSelectionne = filtre.name;
 			console.log(filtre);
 			for (i=0; i<tableauPhoto.length; i++){
 				if (filtre.name == "all"){
@@ -268,6 +308,62 @@
 			}
 			
 		};
+
 		
+	}]);//FIN controlleur portfolio
+	
+
+	/* Début controlleur services*/
+	app.controller('servicevController', ['$sce', function($sce){
+		this.servicevideo ={
+			presentation: {
+				description: 'Nous produisons vos vidéos que ce soit des :<ul><li>spots de publicité</li><li>clips musicaux</li><li>reportages</li><li>interviews</li></ul><p>Nous offrons également un service optionnel en vous proposant un drône pour filmer un évènement</p>',
+				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/2fSzpdY8ABw'),
+				type: 'video/mp4'
+			},
+			carousels: [
+			{
+				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/NA5jurdSbiY'),
+				type: 'video/mp4',
+				titre: 'Parfum',
+				description: 'Réalisation d\'une publicité pour le nouveau parfum Dior Homme. Une fragrance qui évoque la sensualité de la peau et capture le pouvoir d\'attraction de l\'homme idéal. Casting: Denis Loisy et Gila Nazari.'
+			},
+			{
+				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/zpy8MlI7QnM'),
+				type: 'video/mp4',
+				titre: 'Drone',
+				description: 'Réalisation d\'une video haute altitude avec notre drône. La stabilité de l\'appareil et la qualité de l\'image font de cet outil un atout précieux pour la prise de plans larges, pour vos évènements ou autres besoins circonstanciels.'
+			},
+			{
+				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/-XNYoTESoPE'),
+				titre: 'Le Riad',
+				type: 'video/mp4',
+				description: 'Video promotionnelle pour mettre en avant "Le Riad", le nouveau Restaurant/Salon de thé en vogue. Ce coin de Méditerranée, niché au cœur de Nevers, vous emmènera en voyage avec ses thés à la menthe et ses pâtisseries aux saveurs douces et envoûtantes.'
+			}],
+			avisClient: [
+			{
+				logo: 'IMG/fifa.gif',
+				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
+			},
+			{
+				logo: 'IMG/playboy.jpg',
+				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
+			},
+			{
+				logo: 'IMG/ferrari.gif',
+				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
+			}
+			],
+			promotion: {
+				accroche: 'Vous souhaitez réaliser votre vidéo ?'
+			}
+		};
+		this.tab = 1;
+		this.setTab = function(newValue){
+			this.tab = newValue;
+		};
+		this.isSet = function(tabName){
+			return this.tab === tabName;
+		};
 	}]);
 })();

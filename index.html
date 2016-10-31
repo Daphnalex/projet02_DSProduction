@@ -11,7 +11,8 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+<!--ajout police-->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -19,10 +20,12 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
 
 <script type="text/javascript" src="JS/app.js"></script>
 
-<link rel="stylesheet" type="text/css" href="CSS/layout.css">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
 
 <title>My DS Production</title>
 
@@ -32,11 +35,11 @@
 <body ng-app="dsprod">
 
 
-	<nav-bar></nav-bar>
+	<aside navbar></aside>
 
 	<main ng-view></main>
 
-	<footer pied-page></footer>
+	<footer pied></footer>
 
 
 
