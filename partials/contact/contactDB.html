@@ -1,0 +1,96 @@
+
+<div class="container-fluid" >
+
+
+	<div class ="row-fluid"><!--Titre page-->
+		<div class="col-lg-4 col-md-5 col-sm-5 col-xs-6"> 
+			<h2>FORMULAIRE DE CONTACT</h2>
+		</div>
+		<div class="col-lg-8 col-md-7 col-sm-7 col-xs-6">
+			<hr align="right" class="barreservices">
+		</div>
+	</div>
+	<form ng-controller="contactController">
+		<div class = "row-fluid col-xs-12" ng-controller="tabController as tabCtrl">
+			<div class="form-check" ng-init="tab=1">
+	  			<label class="form-check-label col-xs-12 col-md-offset-2 col-md-3">
+	    			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" ng-class="{active: tab == 1}" ng-click="tab=1" ng-model="user.type" checked>
+	    			Je suis un professionnel
+	  			</label>
+	  			<label class="form-check-label col-xs-12 col-md-offset-2 col-md-3">
+	    			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" ng-class="{active: tab == 2}" ng-click="tab=2" ng-model="user.type" checked>
+	    			Je suis un particulier
+	  			</label>
+			</div>
+		</div>
+		<div class="row-fluid col-xs-12 entreprise">
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Nom de l'entreprise</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.name">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Adresse postale</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.adresse">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Numéro de téléphone</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.numero">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Adresse mail</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.mail">
+			</div>
+		</div>
+		<div class="row-fluid col-xs-12 particulier hide">
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Nom d'usage</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.name">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Prénom</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.firstname">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Adresse postale</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.adress">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Numéro de téléphone</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.numero">
+			</div>
+			<div class="row-fluid">
+	  			<label class="form-control-label col-xs-12 col-sm-offset-1 col-sm-3" for="inputSuccess1">Adresse mail</label>
+	  			<input type="text" class="form-control col-xs-offset-1 form-control-success" id="inputSuccess1" ng-model="user.mail">
+			</div>
+		</div>
+		<div class="row-fluid">
+			<!--Quel est votre projet-->
+			<div class="form-group row-fluid col-xs-offset-1">
+				<label for="projets" class="contact_label col-xs-12 col-sm-3">Quel est votre projet?</label>
+				<div class="col-xs-12 col-sm-12">
+					<select id="projets" class="form-control" multiple="multiple" style="width:87%" ng-model="user.typeProjet">
+						<option  value="Video">Vidéo</option>
+						<option  value="Photo">Shooting photo</option>
+						<option  value="Graphique">Réalisation graphique</option>
+						<option  value="Evenement">Evénement</option>
+						<option  value="Drone">Drône</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group row-fluid col-xs-12">
+		    <label for="exampleTextarea" class="col-xs-12 col-sm-offset-1 col-sm-3">Décrivez votre projet :</label>
+		    <textarea class="form-control col-xs-offset-1" id="exampleTextarea" rows="3" ng-model="user.description"></textarea>
+	  	</div>
+
+	  	<pre>user = {{user | json}}</pre>
+		<pre>utilisateur = {{utilisateur | json}}</pre>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#projets").select2();
+	});		
+</script>

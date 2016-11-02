@@ -17,7 +17,7 @@
 	  	</header>
 	</div>
 	<div class="row-fluid col-xs-12">
-		<div  id="gl-item" class="{{element.filtre}} col-lg-2 col-md-2 col-sm-3 col-xs-4 col-xxs-6" ng-repeat-start="element in portfolioCtrl.elements" ng-class="{active: element == photoSelectionne}">
+		<div  id="gl-item" class="{{element.filtre}} col-lg-2 col-md-2 col-sm-3 col-xs-6 col-xxs-12" ng-repeat-start="element in portfolioCtrl.elements" ng-class="{active: element == photoSelectionne}">
 			<div data-toggle="modal" data-target=".{{$index}}">
 				<a ng-click="portfolioCtrl.selectionPhoto(element,$index, portfolioCtrl.elements)" ng-mouseOver="element.active = true" ng-mouseLeave="element.active = false">
 					<img src="{{element.imageMin}}" class="preview-item img-responsive gl-photo" alt="book photo"/>

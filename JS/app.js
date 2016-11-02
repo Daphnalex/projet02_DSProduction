@@ -25,10 +25,25 @@
 				templateUrl: 'partials/services/serviceEvenement.html'
 			})
 			.when('/contact', {
-				templateUrl: 'partials/contact/contact.html'
+				templateUrl: 'partials/contact/contact.html',
+				controller: ''
 			})
 	}]);
 	//DIRECTIVES
+	app.controller("PannelController", function(){
+	    this.tab = 1;
+	    this.selectTab = function(setTab){
+	        this.tab = setTab;
+	    };
+
+	    this.isSelected = function(checkTab){
+	        if(this.tab === checkTab){
+	              return true;
+	    }
+	  }
+
+	});
+
 	app.directive('navbar', function(){
 		return {
 			restrict: 'AE',
@@ -358,12 +373,12 @@
 				accroche: 'Vous souhaitez réaliser votre vidéo ?'
 			}
 		};
-		this.tab = 1;
-		this.setTab = function(newValue){
-			this.tab = newValue;
-		};
-		this.isSet = function(tabName){
-			return this.tab === tabName;
-		};
+	
 	}]);
+
+	/*DEBUT Formulaire de contact*/
+
+
+	/*FIN Formulaire de contact*/
+	
 })();
