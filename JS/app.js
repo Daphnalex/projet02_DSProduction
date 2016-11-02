@@ -30,20 +30,22 @@
 			})
 	}]);
 	//DIRECTIVES
-	app.controller("PannelController", function(){
-	    this.tab = 1;
-	    this.selectTab = function(setTab){
-	        this.tab = setTab;
-	    };
 
-	    this.isSelected = function(checkTab){
-	        if(this.tab === checkTab){
-	              return true;
-	    }
-	  }
+	//directive class active
+	app.controller("PannelController", function(){
+		this.tab = 1;
+		this.selectTab = function(setTab){
+			this.tab = setTab;
+		};
+
+		this.isSelected = function(checkTab){
+    		if(this.tab === checkTab){
+      			return true;
+    	}
+  	}
 
 	});
-
+	
 	app.directive('navbar', function(){
 		return {
 			restrict: 'AE',
@@ -326,59 +328,6 @@
 
 		
 	}]);//FIN controlleur portfolio
-	
 
-	/* Début controlleur services*/
-	app.controller('servicevController', ['$sce', function($sce){
-		this.servicevideo ={
-			presentation: {
-				description: 'Nous produisons vos vidéos que ce soit des :<ul><li>spots de publicité</li><li>clips musicaux</li><li>reportages</li><li>interviews</li></ul><p>Nous offrons également un service optionnel en vous proposant un drône pour filmer un évènement</p>',
-				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/2fSzpdY8ABw'),
-				type: 'video/mp4'
-			},
-			carousels: [
-			{
-				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/NA5jurdSbiY'),
-				type: 'video/mp4',
-				titre: 'Parfum',
-				description: 'Réalisation d\'une publicité pour le nouveau parfum Dior Homme. Une fragrance qui évoque la sensualité de la peau et capture le pouvoir d\'attraction de l\'homme idéal. Casting: Denis Loisy et Gila Nazari.'
-			},
-			{
-				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/zpy8MlI7QnM'),
-				type: 'video/mp4',
-				titre: 'Drone',
-				description: 'Réalisation d\'une video haute altitude avec notre drône. La stabilité de l\'appareil et la qualité de l\'image font de cet outil un atout précieux pour la prise de plans larges, pour vos évènements ou autres besoins circonstanciels.'
-			},
-			{
-				src: $sce.trustAsResourceUrl('https://www.youtube.com/embed/-XNYoTESoPE'),
-				titre: 'Le Riad',
-				type: 'video/mp4',
-				description: 'Video promotionnelle pour mettre en avant "Le Riad", le nouveau Restaurant/Salon de thé en vogue. Ce coin de Méditerranée, niché au cœur de Nevers, vous emmènera en voyage avec ses thés à la menthe et ses pâtisseries aux saveurs douces et envoûtantes.'
-			}],
-			avisClient: [
-			{
-				logo: 'IMG/fifa.gif',
-				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
-			},
-			{
-				logo: 'IMG/playboy.jpg',
-				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
-			},
-			{
-				logo: 'IMG/ferrari.gif',
-				texte: '" Nous travaillons régulièrement avec l\'agence My DS Production depuis plusieurs années. Nous sommes particulièrement satisfaits de leur réactivité et de leur disponibilité. Denis nous accompagne sur toutes les étapes de nos projets avec beaucoup de professionnalisme. "'
-			}
-			],
-			promotion: {
-				accroche: 'Vous souhaitez réaliser votre vidéo ?'
-			}
-		};
-	
-	}]);
-
-	/*DEBUT Formulaire de contact*/
-
-
-	/*FIN Formulaire de contact*/
 	
 })();
