@@ -14,16 +14,24 @@
 			templateUrl: 'partials/portfolio/portfolio.html'
 		})
 		.when('/serviceVideo', {
-			templateUrl: 'partials/services/serviceVideo.html'
+			templateUrl: 'partials/services/Video/serviceVideo.html',
+			controller: 'serviceController',
+			controllerAs: 'servCtrl'
 		})
-		.when('/serviceShooting', {
-			templateUrl: 'partials/services/servicePhoto.html'
+		.when('/servicePhoto', {
+			templateUrl: 'partials/services/Photo/servicePhoto.html',
+			controller: 'serviceController',
+			controllerAs: 'servCtrl'
 		})
-		.when('/serviceGraphisme', {
-			templateUrl: 'partials/services/serviceCreag.html'
+		.when('/serviceCreag', {
+			templateUrl: 'partials/services/Creag/serviceCreag.html',
+			controller: 'serviceController',
+			controllerAs: 'servCtrl'
 		})
-		.when('/serviceEvenement', {
-			templateUrl: 'partials/services/serviceEvent.html'
+		.when('/serviceEvent', {
+			templateUrl: 'partials/services/Event/serviceEvent.html',
+			controller: 'serviceController',
+			controllerAs: 'servCtrl'
 		})
 		.when('/contact', {
 			templateUrl: 'partials/contact/contact.html',
@@ -474,7 +482,7 @@ app.directive("bloc4c", function(){
 
 
 /* Début controlleur services*/
-app.controller('servicevController', ['$sce', function($sce){
+app.controller('serviceController', ['$sce', function($sce){
 	this.servicevideo ={
 		categorie: {
 			type: 'VIDEOS'
