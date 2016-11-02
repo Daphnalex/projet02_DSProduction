@@ -378,6 +378,7 @@
 	
 	}]);
 
+<<<<<<< HEAD
 	/*CONTROLLER Formulaire de contact DB
 	app.controller('contactController', ['$scope', function($scope){
 		$scope.utilisateur = {
@@ -404,6 +405,9 @@
 		};	
 		
 	});
+=======
+	/*DEBUT Formulaire de contact*/
+>>>>>>> 1cf906b1a47e8f95e2605b7fdce7aa758529476d
 
 
 	/*FIN Formulaire de contact*/
