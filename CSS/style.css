@@ -108,7 +108,7 @@ color: #BFA169 !important;
   border: 0px solid black!important;
 }
 
-nav.active{
+.active{
   background: #BFA169 !important;
 }
 .navbar-default .navbar-nav>li>a.active{
@@ -527,14 +527,46 @@ padding-bottom: 15px;
 /*Fin CSS services*/
 
 /* Début CSS formulaire de contact*/
+.select2-container {
+	display : block !important;
+}
 
-
-
-
-
-
-/*Fin CSS formulaire de contact*/
-
+.form-control{
+	width: 80% !important;
+}
+.form-inline{.select2-container {
+	display : block !important;
+}
+	margin-top: 20px;
+}
+.form-control-label{
+	margin-top: 20px;
+	text-align: left;
+}
+.form-check{
+	margin-top: 20px;
+}
+.projet h4{
+	font-size: 20px;
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+.form-group label{
+	text-align: left;
+}
+.form-group{
+	margin-top: 40px;
+}
+.contact_label{
+	text-align: left;
+	margin-top: 20px;
+}
+.input_contact{
+	width:87% !important;
+	border-radius: 4px;
+	margin-left:-12%;
+	color:black;
+}
 /*Début footer*/
 
 footer{ 

@@ -25,47 +25,23 @@
 				templateUrl: 'partials/services/serviceEvenement.html'
 			})
 			.when('/contact', {
-				templateUrl: 'partials/contact/contact.html'
+				templateUrl: 'partials/contact/contact.html',
+				controller: ''
 			})
 	}]);
-
-
-	//Début controller pour copyright
-	app.controller('dateController', function(){
-			this.date = new Date();
-		
-	});
-
-
-
-	//directive de NavBar
-	app.directive("navBar", function(){
-		return{
-			restrict: 'EA',
-			templateUrl: "partials/common/nav.html"
+	//DIRECTIVES
+	app.directive('navbar', function(){
+		return {
+			restrict: 'AE',
+			templateUrl: 'partials/common/nav.html'
 		}
 	});
-
-	//directive class active
-	app.controller("PannelController", function(){
-		this.tab = 1;
-		this.selectTab = function(setTab){
-			this.tab = setTab;
-		};
-
-		this.isSelected = function(checkTab){
-    		if(this.tab === checkTab){
-      			return true;
-    	}
-  	}
-
+	app.directive('pied', function(){
+		return {
+			restrict: 'AE',
+			templateUrl: 'partials/common/footer.html'
+		}
 	});
-
-	//directive du footer
-	app.directive("piedPage", function(){
-		return{
-			restrict: 'EA',
-			templateUrl: "partials/common/footer.html"
 
 
 	//Controlleur home
@@ -338,7 +314,7 @@
 	}]);//FIN controlleur portfolio
 	
 
-	/* Début controlleur services*/
+	/* Début controlleur services DB
 	app.controller('servicevController', ['$sce', function($sce){
 		this.servicevideo ={
 			presentation: {
@@ -383,12 +359,37 @@
 				accroche: 'Vous souhaitez réaliser votre vidéo ?'
 			}
 		};
+	
+	}]);
+
+	/*CONTROLLER Formulaire de contact DB
+	app.controller('contactController', ['$scope', function($scope){
+		$scope.utilisateur = {
+			typeProjet:[]
+		};
+		$scope.update = function(user){
+			$scope.utilisateur = angular.copy(user);
+		};
+		$scope.reset = function(){
+			$scope.user = angular.copy($scope.utilisateur);
+			};
+		$scope.reset();
+		
+	}]);
+
+	/*CONTROLLER CONTROLE TAB DB
+	app.controller('tabController', function(){
 		this.tab = 1;
 		this.setTab = function(newValue){
 			this.tab = newValue;
 		};
 		this.isSet = function(tabName){
 			return this.tab === tabName;
-		};
-	}]);
+		};	
+		
+	});
+
+
+	/*FIN Formulaire de contact*/
+	
 })();
