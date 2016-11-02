@@ -248,6 +248,7 @@ nav.sidebar .navbar-nav > li{
 /*Fin sidebar on hover*/
 
 /*CSS Home*/
+
 .bloc img{
   width:100%;
 }
@@ -259,8 +260,8 @@ nav.sidebar .navbar-nav > li{
             transform: rotate(-90deg);
 }
 .service {
-	width: 100%;
-	color: #BFA169;
+    width: 100%;
+    color: #BFA169;
 }
 #home{
   background-color : #BFA169;
@@ -272,12 +273,10 @@ nav.sidebar .navbar-nav > li{
   max-height: 700px;
   overflow: hidden;
 }
-
 .bloc img{
   width: 100%;
   filter:grayscale(90%);
 }
-
 .bloc:hover img{
   filter:none;
   width: 100%;
@@ -288,7 +287,6 @@ nav.sidebar .navbar-nav > li{
   top: 40%;
   color: white;
 }
-
 /*Fin CSS Home*/
 
 
