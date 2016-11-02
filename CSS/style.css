@@ -49,6 +49,10 @@ header, main, nav, aside, footer {
  main { order: 2; }
  footer { order: 3; }
 }
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 /* FIN CSS common*/
 
 
