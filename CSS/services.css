@@ -26,7 +26,7 @@ body {
 
 h2 {
 	color: black;
-	font-size: 2.3em;
+	font-size: 2.1em;
 	margin-top: 10px;
 	margin-right: 0px;
 	margin-left: 30px;
@@ -190,7 +190,7 @@ h3 {
 @media screen and (min-width: 992px) and (max-width: 1200px){
 
 	h2 {
-		font-size: 2em;
+		font-size: 1.9em;
 	}
 
 	h3 {
@@ -213,7 +213,7 @@ h3 {
 	.barreservices {
 		background-color: #A5A5A5;
 		height: 2px;
-		margin-top: 20px;
+		margin-top: 16px;
 		margin-right: 25px;
 		margin-left: 0px;
 	}
@@ -223,7 +223,7 @@ h3 {
 @media screen and (min-width: 775px) and (max-width: 991px){
 
 	h2 {
-		font-size: 1.4em;
+		font-size: 1.6em;
 	}
 
 	h3 {
@@ -245,17 +245,17 @@ h3 {
 	.barreservices {
 		background-color: #A5A5A5;
 		height: 2px;
-		margin-top: 22px;
+		margin-top: 16px;
 		margin-right: 25px;
 		margin-left: 0px;
 	}
 
 }
 
-@media screen and (min-width: 572px) and (max-width: 774px){
+@media screen and (min-width: 521px) and (max-width: 774px){
 
 	h2 {
-		font-size: 1.2em;
+		font-size: 1.4em;
 	}
 
 	h3 {
@@ -293,10 +293,10 @@ h3 {
 }
 
 
-@media screen and (min-width: 434px) and (max-width: 571px){
+@media screen and (max-width: 520px) {
 
 	h2 {
-		font-size: 1.2em;
+		font-size: 1.4em;
 	}
 
 	h3 {
@@ -317,38 +317,7 @@ h3 {
 	.barreservices {
 		background-color: #A5A5A5;
 		height: 2px;
-		margin-top: 24px;
-		margin-right: 25px;
-		margin-left: 0px;
-	}
-
-}
-
-@media screen and (max-width: 433px) {
-
-	h2 {
-		font-size: 1.2em;
-	}
-
-	h3 {
-		font-size: 20px;
-	}
-
-	p {
-		font-size: 14px;
-	}
-
-	ul {
-		font-size: 14px;
-	}
-	.confiance {
-		font-size: 20px;
-	}
-
-	.barreservices {
-		background-color: #A5A5A5;
-		height: 2px;
-		margin-top: 34px;
+		margin-top: 38px;
 		margin-right: 25px;
 		margin-left: 0px;
 	}
