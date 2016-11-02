@@ -32,11 +32,12 @@
 	}]);
 
 
-	//Controller pour copyright
+	//Début controller pour copyright
 	app.controller('dateController', function(){
 			this.date = new Date();
 		
 	});
+
 
 
 	//directive de NavBar
@@ -46,6 +47,22 @@
 			templateUrl: "partials/common/nav.html"
 		}
 	});
+
+	//directive class active
+	app.controller("PannelController", function(){
+		this.tab = 1;
+		this.selectTab = function(setTab){
+			this.tab = setTab;
+		};
+
+		this.isSelected = function(checkTab){
+    		if(this.tab === checkTab){
+      			return true;
+    	}
+  	}
+
+	});
+
 	//directive du footer
 	app.directive("piedPage", function(){
 		return{
