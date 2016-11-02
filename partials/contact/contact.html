@@ -1,0 +1,116 @@
+	<div class="container-fluid">
+		<div class="row">
+			<h1 class="contact_title col-xxs-6 col-xs-5 col-sm-3 col-md-2 col-lg-2 contact_label">Contact</h1><hr id="hr_contact" class="contact-title col-xxs-3 col-xs-6 col-sm-7 col-md-9 col-lg-9 "/>
+		</div>
+	<!--Formulaire-->
+	<form  class="contactForm">
+		<!--radio (checkbox) -->
+		<div class="row">
+			<div class="form-group">
+				<div class="radios col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-6 col-lg-offset-3">
+					<div class="align" id="radio1">
+						<label class="radio-inline contact_label">
+				  			<input ng-click="storeContact.clickPro()" ng-model="user.type" type="radio" name="inlineRadioOptions" ng-class="{active:storeContact.isSelected(1)}" id="inlineRadio1" value="Professionnel" ng-checked="true"/>Je suis un professionnel
+						</label>
+					</div>
+					<div class="align" id="radio2">
+						<label class="radio-inline contact_label" id="radio-inline2">
+							<input ng-class="{active:storeContact.isSelected(2)}"  ng-click="storeContact.clickPart()" ng-model="user.type" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Particulier"/>Je suis un particulier
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- PARTIE ENTREPRISE -->
+		<div class="row">
+			<div ng-show="storeContact.proChecked" id="entreprise" class="home active">
+				<!--nom de l'entreprise-->
+				<div class="form-group">
+			    	<label for="NomDeLEntreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Nom de l'entreprise</label>
+			    	<input ng-model="user.nom" type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="nomEntreprise" placeholder="">
+				</div>
+				<!--adresse-->
+				<div class="form-group">
+			    	<label for="Adresse" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Adresse de l'entreprise</label>
+			    	<input ng-model="user.adresse" type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="adresse" placeholder="">
+				</div>
+				<!--numéro de téléphone-->
+		  		<div class="form-group">
+			    	<label for="numero de telephone" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Numéro de téléphone</label>
+			    	<input ng-model="user.numero" type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="telephoneEntreprise" placeholder="">
+				</div>
+			</div>
+		</div>
+
+		<!-- PARTIE PARTICULIER -->
+		<div class="row">
+			<div ng-show="storeContact.partChecked" id ="particulier">
+				<!-- nom -->
+				<div class ="form-group" id="form">
+					<label  for="NomDuParticulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre nom</label>
+					<input ng-model="user.nom" type="particulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="nomParticulier" placeholder="">
+				</div>
+				<!--adresse-->
+				<div class="form-group">
+					<label for="Adresse" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre adresse</label>
+					<input ng-model="user.adresse" type="particulier" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="adresseParticulier" placeholder="">
+					</iput>
+				</div>
+				<!--numéro de téléphone-->
+				<div class="form-group">
+					<label for="numero de telephone" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Votre numéro de téléphone</label>
+					<input ng-model="user.numero" type="entreprise" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact" id="telephoneParticulier" placeholder="">
+				</div>
+			</div>
+		</div>
+
+		<!--Quel est votre projet-->
+		<div class="row-fluid"> 
+		<!--Quel est votre projet--> 
+			<div class="form-group row"> 
+			<label for="projets" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Quel est votre projet ?</label>
+				<div class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact">
+					<select id="projets" class="form-control" multiple="multiple" style="width: none;">
+					<option value="Video">Vidéo</option>
+					<option value="Photo">Shooting photo</option>
+					<option value="Graphique">Réalisation graphique</option>
+					<option value="Evenement">Evénement</option>
+					<option value="Drone">Drône</option>
+				</select>
+				</div>
+			</div>
+		</div>
+	 		<!--Décrivez votre projet-->
+	 		<div class="form-group textarea" id="form">
+	 			<label for="description" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 contact_label">Décrivez votre projet</label>
+	 			
+		 		<textarea class="textarea_contact col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 input_contact">
+		 		</textarea>
+		  	</div>
+		  	<!--bouton-->
+		  	<div class="form-group">
+		  		<button type="envoi" class="btn btn-default col-xs-8 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4 input_contact">Envoyez votre demande</button>
+		  	</div>
+	  	</div>
+	</form>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row bottom_contact">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 infos">	
+				<h6 class="mes_infos contact_label">Mon adresse : 16 avenue Général de Gaulle</h6>
+				<h6 class="mes_infos contact_label">Mon mail : mydsproduction@gmail.com</h6>
+				<h6 class="mes_infos contact_label">Mon téléphone : 03.86.21.90.78</h6>
+			</div>
+			<!-- googlemap -->
+			<iframe class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21774.371206480057!2d3.142219001872069!3d46.985333485361636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f04f5e20402f61%3A0x58f94858a803848!2s58000+Nevers!5e0!3m2!1sfr!2sfr!4v1476889443187" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<!--<pre>user = {{user | json}}</pre>
+	<pre>utilisateur = {{utilisateur | json}}</pre>-->
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $("#projets").select2();
+    });
+	</script>
+

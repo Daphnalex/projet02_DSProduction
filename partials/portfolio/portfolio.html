@@ -1,76 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>My DS Production</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../CSS/portfolio.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
- 
-</head>
-<body class="container-fluid" ng-app="portfolio">
+<div class="container-fluid" ng-app="dsProd" ng-controller="portfolioController as portfolioCtrl" id="preview gallery" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<div class="row-fluid" id="entete">
-		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
 			<h2><span>PORTFOLIO</span></h2>
 		</div>
-		<div id="ligne" class="col-lg-10 col-md-10 col-sm-9 col-xs-8">
+		<div id="ligne" class="col-lg-10 col-md-10 col-sm-8 col-xs-12">
 			<hr>
 		</div>
 	</div>
 	<div id="header" class="row-fluid">
 	  	<header>
 	    	<div id="gallery-filters" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	      		<div id="filter" class="active col-lg-1 col-md-1 col-sm-2 col-xs-3 filterAll">
-	        		<a data-filter="*" href="#">ALL</a>
-	      		</div>
-	      		<div id="filter" class="col-lg-1 col-md-1 col-sm-2 col-xs-3 filterPhoto">
-	        		<a data-filter="*" href="#">BOOK</a>
-	      		</div>
-	      		<div id="filter" class="col-lg-2 col-md-2 col-sm-4 col-xs-5 filterPub">
-	        		<a data-filter="*" href="#">PUBLICITE</a>
-	      		</div>
+	      		<div id="filter" ng-repeat="filtre in portfolioCtrl.filtres" ng-class="{active: filtre == filtreSelectionne}" class="col-lg-1 col-md-1 col-sm-2 col-xs-3"  >
+	      			<a ng-click="portfolioCtrl.triPhoto(filtre, portfolioCtrl.elements)" >{{filtre.name|uppercase}}</a>
+	        	</div>
 	    	</div>
 	  	</header>
 	</div>
-	<div id="section gallery" class="container-fluid">
-  		<div class="row-fluid" ng-controller="portfolioCtrl">
-    		<div id="preview gallery" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	        	<div class="row-fluid">
-	        		<div id="gl-item" class="col-lg-2 col-md-2 col-sm-4 col-xs-6" ng-repeat="element.image in elements.image" ng-class="{active: element.image == photoSelectionne">
-	        			<a ng-click="selectionPhoto(photo)">
-	        				<img id="image1" class="preview-item img-responsive gl-photo" src="{{element.image}}" data-toggle="modal" data-target=".image1"/>
-	        			</a>
-	           		</div>
-			   		<div ng-if="($index % 6 == 5)" class="row-fluid" ng-repeat-end>
-				    	<div id="image1" class="gl-preview col-lg-12 col-md-12 col-sm-12 col-xs-12" data-toggle="modal" data-target=".image1">
-				        	<div class="col-lg-1 col-lg-offset-11 col-md-1 col-md-offset-11 col-sm-1 col-sm-offset-11 col-xs-1 col-xs-offset-11">
-				            	<a href="#" class="glp-close">×</a>
-				        	</div>
-				        	<div class="row-fluid gl-preview-container">
-				            	<div id="gl-preview-item" class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-				                	<img class="img-responsive " src="{{element.image}}"/>
-				            	</div>
-				            	<div class="gl-preview-description col-lg-9 col-md-9 col-sm-9 col-xs-9">
-				                	<p>
-				                	{{element.description}}
-				                	</p>
-				                	<div class="bouton devis  col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-2 col-xs-offset-8">
-				                  		<button class="btn btn-primary glp-readmore">Demandez votre devis
-				                  		</button>
-				                	</div>
-				            	</div>
-				        	</div>
-				    	</div>
-				    </div>
-			    </div>
+	<div class="row-fluid col-xs-12">
+		<div  id="gl-item" class="{{element.filtre}} col-lg-2 col-md-2 col-sm-3 col-xs-6 col-xxs-12" ng-repeat-start="element in portfolioCtrl.elements" ng-class="{active: element == photoSelectionne}">
+			<div data-toggle="modal" data-target=".{{$index}}">
+				<a ng-click="portfolioCtrl.selectionPhoto(element,$index, portfolioCtrl.elements)" ng-mouseOver="element.active = true" ng-mouseLeave="element.active = false">
+					<img src="{{element.imageMin}}" class="preview-item img-responsive gl-photo" alt="book photo"/>
+					<figcaption ng-show="element.active == true" class="col-xs-12">
+                        <p>{{element.type|uppercase}}</p>
+                    </figcaption>
+				</a>
 			</div>
-    	</div>
-  	</div>
-  	<footer>
-		<script src="../../JS/angular_portfolio.js"></script>
-	</footer>
-</body>
-
-</html>
+		</div>
+		<div class="row-fluid" ng-if="portfolioCtrl.page >= 992">
+			<div id={{$index}} class="gl-preview col-lg-12 col-md-12 col-sm-hidden col-xs-hidden hide" >
+				<div class="row col-lg-1 col-lg-offset-11 col-md-1 col-md-offset-11 col-sm-1 col-sm-offset-11 col-xs-1 col-xs-offset-11">
+	            	<a ng-click="portfolioCtrl.fermetureBloc()" class="glp-close">×</a>	
+	        	</div>
+				<div class="row col-lg-4 col-md-4 gl-preview-container">
+					<div  id="gl-preview-item" class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-6 col-xs-12" ng-if="portfolioCtrl.photoSelectionne.type ==='photographie'">
+						<img class="img-responsive" src="{{portfolioCtrl.photoSelectionne.media}}">
+					</div>
+					<div id="gl-preview-item" class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-6 col-xs-12" ng-if="portfolioCtrl.photoSelectionne.type ==='video'">
+						<video src="{{portfolioCtrl.photoSelectionne.media}}" width="100%" controls>
+						</video>
+					</div>
+					<div class="gl-preview-description col-lg-offset-1 col-lg-5 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+						<p>{{portfolioCtrl.photoSelectionne.description}}</p>
+						<div class="bouton devis col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+							<button class="glp-readmore">Demander votre devis</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid modal fade {{$index}}" ng-if="portfolioCtrl.page < 992" tabindex="-1" role="dialog" aria-labelledby="{{$index}}" ng-repeat-end>
+			<div class="modal-dialog modal-lg" role="document">
+				<div id={{$index}} class="modal-content gl-preview col-lg-12 col-md-12 col-sm-hidden col-xs-hidden show">
+					<div class="row">
+		            	 <div class="modal-header">
+			                <button type="button" class="close" aria-hidden="true" data-dismiss="modal">×</button>
+			              </div>
+		        	</div>
+					<div class="row col-lg-4 col-md-4 gl-preview-container">
+						<div  id="gl-preview-item" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3" ng-if="portfolioCtrl.photoSelectionne.type ==='photographie'">
+							<img class="img-responsive" src="{{portfolioCtrl.photoSelectionne.media}}"/>
+						</div>
+						<div id="gl-preview-item" class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-6 col-xs-12" ng-if="portfolioCtrl.photoSelectionne.type ==='video'">
+							<video src="{{portfolioCtrl.photoSelectionne.media}}" width="100%" controls>
+							</video>
+						</div>
+						<div class="gl-preview-description col-lg-offset-1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<p>{{portfolioCtrl.photoSelectionne.description}}</p>
+							<div class="row bouton devis col-xxs-12 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+								<button class="glp-readmore">Demander votre devis</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

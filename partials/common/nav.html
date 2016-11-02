@@ -1,7 +1,4 @@
-<!--Début sidebar on hover-->
-
-
-<nav class="navbar navbar-default sidebar" role="navigation">
+<nav ng-controller="PannelController as pannel" class="navbar navbar-default sidebar" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
@@ -9,22 +6,34 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>      
+        </button>
       </div>
       <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+
         <ul class="nav navbar-nav">
-          <li><center><img src="IMG/logo.png" width="80" height="80" class="logo"></center></li>
-          <li ><a href="#/accueil" class="active">ACCUEIL<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>  
-          <li ><a href="#/serviceVideo">REALISATION VIDEO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-facetime-video"></span></a></li>  
-          <li ><a href="#/servicePhoto">SHOOTING PHOTO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-camera"></span></a></li>  
-          <li ><a href="#/serviceGraphisme">CREATION GRAPHIQUE<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a></li>  
-          <li ><a href="#/serviceEvenement">ORGANISATION EVENEMENT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-glass"></span></a></li>            
-          <li ><a href="#/portfolio">PORTFOLIO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span></a></li>  
-          <li ><a href="#/aPropos">A PROPOS<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-          <li ><a href="#/contact">CONTACT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+
+
+          <li><center><img src="IMG/logo.png" alt="logo" width="80" height="80" class="logo"></center></li>
+
+          <li ng-class="{active:pannel.isSelected(1)}"><a href="#/home" ng-click="pannel.selectTab(1)">ACCUEIL<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+
+          <li ng-class="{active:pannel.isSelected(2)}" ><a href="#/serviceVideoDB" ng-click="pannel.selectTab(2)">REALISATION VIDEO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-facetime-video"></span></a></li>
+
+          <li ng-class="{active:pannel.isSelected(3)}"><a href="#/servicePhoto" ng-click="pannel.selectTab(3)" >SHOOTING PHOTO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-camera"></span></a></li> 
+
+          <li ng-class="{active:pannel.isSelected(4)}"><a href="#/serviceGraphisme" ng-click="pannel.selectTab(4)">CREATION GRAPHIQUE<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a></li>
+
+          <li ng-class="{active:pannel.isSelected(5)}"><a href="#/serviceEvenement" ng-click="pannel.selectTab(5)">ORGANISATION EVENEMENT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-glass"></span></a></li> 
+
+          <li ng-class="{active:pannel.isSelected(6)}"><a href="#/portfolio" ng-click="pannel.selectTab(6)">PORTFOLIO<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span></a></li>
+
+          <li ng-class="{active:pannel.isSelected(7)}"><a href="#/aPropos" ng-click="pannel.selectTab(7)">A PROPOS<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+
+          <li ng-class="{active:pannel.isSelected(8)}"><a href="#/contact" ng-click="pannel.selectTab(8)">CONTACT<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+
+
         </ul>
+
       </div>
   </div>
 </nav>
-
-<!--Fin sidebar on hover-->
