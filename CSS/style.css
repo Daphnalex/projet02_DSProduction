@@ -55,7 +55,14 @@ header, main, nav, aside, footer {
 }
 /* FIN CSS common*/
 
+/*CSS IntroVideo*/
 
+#services{
+  text-align: center;
+  margin-top:600px;
+}
+
+/*FIN CSS video Intro*/
 
 /* Début sidebar on hover*/
 
