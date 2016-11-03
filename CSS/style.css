@@ -404,6 +404,9 @@ button.glp-readmore:hover{
     font-size: 20px;
     cursor:pointer;
 }
+.devis a {
+  color: white;
+}
 /*Fin CSS Portfolio*/
 
 /*CSS page services*/
