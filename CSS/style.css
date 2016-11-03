@@ -96,7 +96,7 @@ color: #BFA169 !important;
   background-image: linear-gradient(to bottom,#BFA169 0, #BFA169 100%);
 
   background: #BFA169 !important;
-  color: #555 !important;
+  color: white !important;
 }
 .navbar-collapse.collapse.in a.active {
   color: black !important;
@@ -119,6 +119,7 @@ color: #BFA169 !important;
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
   background-image: linear-gradient(to bottom,#BFA169 0, #BFA169 100%);
+  color: white !important;
 }
 
 .navbar-default .navbar-nav>li>a.active{
@@ -130,6 +131,10 @@ nav.sidebar .navbar-nav > li{
 }
 .navbar-default .navbar-nav>li>a{
   color: #BFA169;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: white;
 }
 
 .navbar-nav>li>a {
