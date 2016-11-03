@@ -8,41 +8,36 @@
 			templateUrl: 'partials/home/home.html'
 		})
 		.when('/home', {
-			templateUrl: 'partials/home/home.html',
-			activeNav: 'home'
+			templateUrl: 'partials/home/home.html'
 		})
 		.when('/portfolio', {
 			templateUrl: 'partials/portfolio/portfolio.html'
 		})
 		.when('/serviceVideo', {
 			templateUrl: 'partials/services/Video/serviceVideo.html',
-			activeNav: 'serviceVideo',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/servicePhoto', {
 			templateUrl: 'partials/services/Photo/servicePhoto.html',
-			activeNav: 'servicePhoto',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/serviceCreag', {
 			templateUrl: 'partials/services/Creag/serviceCreag.html',
-			activeNav: 'serviceCreag',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/serviceEvent', {
 			templateUrl: 'partials/services/Event/serviceEvent.html',
-			activeNav: 'serviceEvent',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/contact', {
 			templateUrl: 'partials/contact/contact.html',
-			activeNav: 'contact',
 			controller: 'contactController',
 			controllerAs : 'storeContact'
+
 		})
 	}]);
 
@@ -200,9 +195,8 @@ app.directive("bloc4c", function(){
 		this.isSelected = function(checkTab){
     		if(this.tab === checkTab){
       			return true;
-	    	}
-	  	}
-	  	
+    	}
+  	}
 
 	});
 	
