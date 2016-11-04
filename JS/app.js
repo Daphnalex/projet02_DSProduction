@@ -240,17 +240,17 @@ app.directive("bloc4c", function(){
 		{
 			titre:"Shooting photo",
 			image: "IMG/sp_lg.jpg",
-			lien:"#/serviceShooting"
+			lien:"#/servicePhoto"
 		},
 		{
 			titre:"Création graphique",
 			image: "IMG/crea_lg.jpg",
-			lien:"#/serviceGraphisme"
+			lien:"#/serviceCreag"
 		},
 		{
 			titre:"Evènementiels",
 			image: "IMG/event_lg.JPG",
-			lien:"#/serviceEvenement"
+			lien:"#/serviceEvent"
 		}];
 		this.servicesResponsive=[
 		{
@@ -261,17 +261,17 @@ app.directive("bloc4c", function(){
 		{
 			titre:"Shooting photo",
 			image: "IMG/shoot_sm.jpg",
-			lien:"#/serviceShooting"
+			lien:"#/servicePhoto"
 		},
 		{
 			titre:"Création graphique",
 			image: "IMG/crea_sm.jpg",
-			lien:"#/serviceGraphisme"
+			lien:"#/serviceCreag"
 		},
 		{
 			titre:"Evènementiels",
 			image: "IMG/event_sm.JPG",
-			lien:"#/serviceEvenement"
+			lien:"#/serviceEvent"
 		}];
 
 	});//FIN controlleur home
