@@ -70,9 +70,14 @@ nav.sidebar, .main{
   -o-transition: margin 200ms ease-out;
   transition: margin 200ms ease-out;
 }
-
+.navbar-default .navbar-nav>li>a:hover{
+  color: white;
+}
 .main{
   padding: 10px 10px 0 10px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  color:white !important;
 }
 
 @media (max-width: 764px) {
@@ -248,9 +253,14 @@ section{
 /*Fin sidebar on hover*/
 
 /*CSS Home*/
-
+.orangeb > img{
+  width: 100%;
+}
 .bloc img{
   width:100%;
+}
+.accroche{
+  padding-top: 1.5%;
 }
 .rotate {
  -webkit-transform: rotate(-90deg);
