@@ -228,48 +228,49 @@ app.directive("bloc4c", function(){
 	//Controlleur home
 	app.controller('homeController', function(){
 		this.titre = {
-			accroche: 'Votre agence publicitaire et audiovisuelle'
+			image: "IMG/newtitre.png",
+			accroche: 'Votre agence publicitaire audiovisuelle <br/> Production images, graphismes et animations'
 		};
 		this.services=[
 		{
 			titre:"Réalisation vidéo",
-			image: "IMG/img1.png",
+			image: "IMG/video_lg.jpg",
 			lien:"#/serviceVideo"
 		},
 		{
 			titre:"Shooting photo",
-			image: "IMG/img2.png",
+			image: "IMG/sp_lg.jpg",
 			lien:"#/serviceShooting"
 		},
 		{
 			titre:"Création graphique",
-			image: "IMG/img3.jpg",
+			image: "IMG/crea_lg.jpg",
 			lien:"#/serviceGraphisme"
 		},
 		{
 			titre:"Evènementiels",
-			image: "IMG/img4.jpg",
+			image: "IMG/event_lg.JPG",
 			lien:"#/serviceEvenement"
 		}];
 		this.servicesResponsive=[
 		{
 			titre:"Réalisation vidéo",
-			image: "IMG/video_test.png",
+			image: "IMG/video_sm.jpg",
 			lien:"#/serviceVideo"
 		},
 		{
 			titre:"Shooting photo",
-			image: "IMG/photo_test.jpg",
+			image: "IMG/shoot_sm.jpg",
 			lien:"#/serviceShooting"
 		},
 		{
 			titre:"Création graphique",
-			image: "IMG/graph.jpg",
+			image: "IMG/crea_sm.jpg",
 			lien:"#/serviceGraphisme"
 		},
 		{
 			titre:"Evènementiels",
-			image: "IMG/champ_test.jpg",
+			image: "IMG/event_sm.JPG",
 			lien:"#/serviceEvenement"
 		}];
 
