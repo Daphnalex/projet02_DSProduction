@@ -15,11 +15,12 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active" ng-show = "tab == $index" ng-repeat = "carousel in servCtrl.servicephoto.carousels">
-						<iframe class="col-lg-5 col-md-6 col-sm-6 col-xs-12" width="590" height="315" src={{carousel.src}} frameborder="0" allowfullscreen></iframe>
-
-						<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 list" >
-							<h3>{{carousel.titre}}</h3>
-							<p class="rea1">{{carousel.description}}
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<img src={{carousel.src}} class="servimg">
+					</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 list" >
+							<h4>{{carousel.titre}}</h4>
+							<p class="real">{{carousel.description}}
 							</p>
 						</div>
 					</div>

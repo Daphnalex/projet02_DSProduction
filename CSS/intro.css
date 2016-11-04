@@ -26,8 +26,10 @@ button.boutonCommon{
 	padding-right: 10px !important;
 	margin-bottom: 20px;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary{
-	background-color: transparent;
+button.boutonCommon:hover{
+	background-color: #BFA169;
+	color: white !important;
+
 }
 #block{
 	position: fixed;

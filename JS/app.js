@@ -9,7 +9,8 @@
 		})
 		.when('/home', {
 			templateUrl: 'partials/home/home.html',
-			activeNav: 'home'
+			label: 'home'
+
 		})
 		.when('/portfolio', {
 			templateUrl: 'partials/portfolio/portfolio.html'
@@ -191,23 +192,17 @@ app.directive("bloc4c", function(){
 	//DIRECTIVES
 
 	//directive class active
-	app.controller("PannelController", function($location, $scope){
-		$scope.tab = 1;
-		$scope.selectTab = function(setTab){
-			$scope.tab = setTab;
+	app.controller("PannelController", function(){
+		this.tab = 1;
+		this.selectTab = function(setTab){
+			this.tab = setTab;
 		};
 
-		$scope.isSelected = function(checkTab){
-    		if($scope.tab === checkTab){
+		this.isSelected = function(checkTab){
+    		if(this.tab === checkTab){
       			return true;
 	    	}
-	  	}
-	  	$scope.watch(function(){
-	  		return $location.path();
-	  	}, function(newPath){
-	  		console.log(newPath);
-	  	});
-	  	
+	  	}  	
 
 	});
 	
