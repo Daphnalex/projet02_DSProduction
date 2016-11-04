@@ -55,7 +55,14 @@ header, main, nav, aside, footer {
 }
 /* FIN CSS common*/
 
+/*CSS IntroVideo*/
 
+#services{
+  text-align: center;
+  margin-top:600px;
+}
+
+/*FIN CSS video Intro*/
 
 /* Début sidebar on hover*/
 
@@ -106,6 +113,7 @@ nav.sidebar, .main{
 
 @media (min-width: 765px) {
 
+<<<<<<< HEAD
   .navbar-header{
     background-color: black !important;
   }
@@ -115,6 +123,14 @@ nav.sidebar, .main{
   .navbar{
     border: 0px solid black!important;
   }
+=======
+  background: #BFA169 !important;
+  color: white !important;
+}
+.navbar-collapse.collapse.in a.active {
+  color: black !important;
+}
+>>>>>>> 352b1712b968b3cebd8e3f8bc056e7465885f981
 
 
   .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
@@ -132,9 +148,16 @@ nav.sidebar, .main{
     color: #BFA169;
   }
 
+<<<<<<< HEAD
   .navbar-nav>li>a {
     padding-bottom: 26px;
   }
+=======
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
+  background-image: linear-gradient(to bottom,#BFA169 0, #BFA169 100%);
+  color: white !important;
+}
+>>>>>>> 352b1712b968b3cebd8e3f8bc056e7465885f981
 
 
   .main{
@@ -144,6 +167,7 @@ nav.sidebar, .main{
     float: right;
   }
 
+<<<<<<< HEAD
   nav.sidebar:hover + .main{
     margin-left: 200px;
   }
@@ -175,6 +199,112 @@ nav.sidebar, .main{
     float: none;
     width: auto;
     margin-top: 0;
+=======
+.navbar-default .navbar-nav>li>a:hover{
+  color: white;
+}
+
+.navbar-nav>li>a {
+  padding-bottom: 26px;
+}
+
+
+    .main{
+      position: absolute;
+      width: calc(100% - 40px); 
+      margin-left: 40px;
+      float: right;
+    }
+
+    nav.sidebar:hover + .main{
+      margin-left: 200px;
+    }
+
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+    
+    nav.sidebar a{
+      padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child{
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li{
+      border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+      padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+      color: #777;
+    }
+
+    nav.sidebar{
+      width: 305px;
+      height: 100%;
+      margin-left: -265px;
+      float: left;
+      margin-bottom: 0px;
+      background: black !important;
+      text-align: left;
+    }
+
+    nav.sidebar li {
+      width: 100%;
+    }
+
+    nav.sidebar:hover{
+      margin-left: 0px;
+    }
+
+    .forAnimate{
+      opacity: 0;
+    }
+  }
+   
+  @media (min-width: 1330px) {
+
+    .main{
+      width: calc(100% - 200px);
+      margin-left: 200px;
+    }
+
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+
+    nav.sidebar .forAnimate{
+      opacity: 1;
+
+    }
+  }
+
+  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+>>>>>>> 352b1712b968b3cebd8e3f8bc056e7465885f981
     background-color: transparent;
     border: 0;
     -webkit-box-shadow: none;
@@ -259,16 +389,37 @@ section{
  -o-transform: rotate(-90deg);
  transform: rotate(-90deg);
 }
+
+.orangeb > img{
+  width : 100%;
+}
+
+.accroche{
+  background-color: #BFA169;
+}
 .service {
   width: 100%;
   color: #BFA169;
 }
+
 #home{
-  background-color : #BFA169;
+  background-color : white;
 }
+
+.description_titre{
+  background-color: #BFA169;
+  min-height: 123px;
+  padding-top: 5%;
+}
+
+.description{
+  vertical-align: middle;
+}
+
 .titre{
   background : white;
 }
+
 .bloc{
   max-height: 700px;
   overflow: hidden;
@@ -401,6 +552,9 @@ button.glp-readmore:hover{
   color: white;
   font-size: 20px;
   cursor:pointer;
+}
+.devis a {
+  color: white;
 }
 /*Fin CSS Portfolio*/
 
@@ -600,12 +754,14 @@ button#black:hover{
 
 .mes_infos{
   font-size: 24px;
-  margin-top: 20.63%;
-  margin-bottom: 10%;
+
+  color: #333 ;
+  margin-bottom: 18%;
+  margin-top: 3.49%;
 }
 
 .infos{
-  background-color: #000000;
+  background-color: #BFA169;
   margin-top: 5%;
   margin-left: 5%;
 }

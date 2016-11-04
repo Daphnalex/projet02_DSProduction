@@ -8,36 +8,41 @@
 			templateUrl: 'partials/home/home.html'
 		})
 		.when('/home', {
-			templateUrl: 'partials/home/home.html'
+			templateUrl: 'partials/home/home.html',
+			activeNav: 'home'
 		})
 		.when('/portfolio', {
 			templateUrl: 'partials/portfolio/portfolio.html'
 		})
 		.when('/serviceVideo', {
 			templateUrl: 'partials/services/Video/serviceVideo.html',
+			activeNav: 'serviceVideo',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/servicePhoto', {
 			templateUrl: 'partials/services/Photo/servicePhoto.html',
+			activeNav: 'servicePhoto',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/serviceCreag', {
 			templateUrl: 'partials/services/Creag/serviceCreag.html',
+			activeNav: 'serviceCreag',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/serviceEvent', {
 			templateUrl: 'partials/services/Event/serviceEvent.html',
+			activeNav: 'serviceEvent',
 			controller: 'serviceController',
 			controllerAs: 'servCtrl'
 		})
 		.when('/contact', {
 			templateUrl: 'partials/contact/contact.html',
+			activeNav: 'contact',
 			controller: 'contactController',
 			controllerAs : 'storeContact'
-
 		})
 	}]);
 
@@ -186,17 +191,23 @@ app.directive("bloc4c", function(){
 	//DIRECTIVES
 
 	//directive class active
-	app.controller("PannelController", function(){
-		this.tab = 1;
-		this.selectTab = function(setTab){
-			this.tab = setTab;
+	app.controller("PannelController", function($location, $scope){
+		$scope.tab = 1;
+		$scope.selectTab = function(setTab){
+			$scope.tab = setTab;
 		};
 
-		this.isSelected = function(checkTab){
-    		if(this.tab === checkTab){
+		$scope.isSelected = function(checkTab){
+    		if($scope.tab === checkTab){
       			return true;
-    	}
-  	}
+	    	}
+	  	}
+	  	$scope.watch(function(){
+	  		return $location.path();
+	  	}, function(newPath){
+	  		console.log(newPath);
+	  	});
+	  	
 
 	});
 	
@@ -217,48 +228,49 @@ app.directive("bloc4c", function(){
 	//Controlleur home
 	app.controller('homeController', function(){
 		this.titre = {
-			accroche: 'Votre agence publicitaire et audiovisuelle'
+			image: "IMG/newtitre.png",
+			accroche: 'Votre agence publicitaire audiovisuelle <br/> Production images, graphismes et animations'
 		};
 		this.services=[
 		{
 			titre:"Réalisation vidéo",
-			image: "IMG/img1.png",
+			image: "IMG/video_lg.jpg",
 			lien:"#/serviceVideo"
 		},
 		{
 			titre:"Shooting photo",
-			image: "IMG/img2.png",
+			image: "IMG/sp_lg.jpg",
 			lien:"#/serviceShooting"
 		},
 		{
 			titre:"Création graphique",
-			image: "IMG/img3.jpg",
+			image: "IMG/crea_lg.jpg",
 			lien:"#/serviceGraphisme"
 		},
 		{
 			titre:"Evènementiels",
-			image: "IMG/img4.jpg",
+			image: "IMG/event_lg.JPG",
 			lien:"#/serviceEvenement"
 		}];
 		this.servicesResponsive=[
 		{
 			titre:"Réalisation vidéo",
-			image: "IMG/video_test.png",
+			image: "IMG/video_sm.jpg",
 			lien:"#/serviceVideo"
 		},
 		{
 			titre:"Shooting photo",
-			image: "IMG/photo_test.jpg",
+			image: "IMG/shoot_sm.jpg",
 			lien:"#/serviceShooting"
 		},
 		{
 			titre:"Création graphique",
-			image: "IMG/graph.jpg",
+			image: "IMG/crea_sm.jpg",
 			lien:"#/serviceGraphisme"
 		},
 		{
 			titre:"Evènementiels",
-			image: "IMG/champ_test.jpg",
+			image: "IMG/event_sm.JPG",
 			lien:"#/serviceEvenement"
 		}];
 
@@ -713,5 +725,7 @@ app.controller('contactController', function(){
 		}
 
 	}
+
+	
   });
 })();
