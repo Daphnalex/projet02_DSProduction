@@ -191,17 +191,22 @@ app.directive("bloc4c", function(){
 	//DIRECTIVES
 
 	//directive class active
-	app.controller("PannelController", function(){
-		this.tab = 1;
-		this.selectTab = function(setTab){
-			this.tab = setTab;
+	app.controller("PannelController", function($location, $scope){
+		$scope.tab = 1;
+		$scope.selectTab = function(setTab){
+			$scope.tab = setTab;
 		};
 
-		this.isSelected = function(checkTab){
-    		if(this.tab === checkTab){
+		$scope.isSelected = function(checkTab){
+    		if($scope.tab === checkTab){
       			return true;
 	    	}
 	  	}
+	  	$scope.watch(function(){
+	  		return $location.path();
+	  	}, function(newPath){
+	  		console.log(newPath);
+	  	});
 	  	
 
 	});
