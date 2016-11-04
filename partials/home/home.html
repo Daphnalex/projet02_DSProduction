@@ -3,15 +3,14 @@
 		<!--Intitulé my ds production-->
 		<div class=" titre col-xs-12 col-sm-6">
 			<div class="text-center orangeb">
-
-				<h1 style="color:black">My Ds</h1><h2 style="color:black">Production</h2>			
+				<img src="{{homeCtrl.titre.image}}" alt="titre">
 			</div>
 		</div>
 		<!--Description-->
-		<div class="col-xs-12 col-sm-6">
+		<div class="col-xs-12 col-sm-6 accroche">
 			<div class="text-center orangeb">
 				<div class="description">
-					<h3 class="description_titre">Votre agence publicitaire et audiovisuelle</h3>
+					<h4 class="description_titre" ng-bind-html="homeCtrl.titre.accroche"></h4>
 				</div>
 			</div>
 		</div>
@@ -24,7 +23,7 @@
 		<div ng-repeat="service in homeCtrl.servicesResponsive" class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
 			<div class="bloc row-fluid col-xs-12">
 					<a href="{{service.bouton}}">
-						<img class="home_photo" src="{{service.image}}" alt="Réalisation video">
+						<img class="home_photo" src="{{service.image}}" alt="Services">
 					</a>
 					<div class="auDessus">
 						<div class="title_btn">

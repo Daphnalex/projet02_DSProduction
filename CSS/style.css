@@ -254,16 +254,37 @@ nav.sidebar .navbar-nav > li{
          -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
 }
+
+.orangeb > img{
+  width : 100%;
+}
+
+.accroche{
+  background-color: #BFA169;
+}
 .service {
 	width: 100%;
 	color: #BFA169;
 }
+
 #home{
-  background-color : #BFA169;
+  background-color : white;
 }
+
+.description_titre{
+  background-color: #BFA169;
+  min-height: 123px;
+  padding-top: 5%;
+}
+
+.description{
+  vertical-align: middle;
+}
+
 .titre{
   background : white;
 }
+
 .bloc{
   max-height: 700px;
   overflow: hidden;
@@ -557,12 +578,14 @@ button#black{
 
 .mes_infos{
   font-size: 24px;
-  margin-top: 20.63%;
-  margin-bottom: 10%;
+
+  color: #333 ;
+  margin-bottom: 18%;
+  margin-top: 3.49%;
 }
 
 .infos{
-  background-color: #000000;
+  background-color: #BFA169;
   margin-top: 5%;
   margin-left: 5%;
 }
